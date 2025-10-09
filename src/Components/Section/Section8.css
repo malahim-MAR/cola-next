@@ -1,0 +1,142 @@
+.hero-lychee {
+  position: relative;
+  /* width: 100%; */
+  height: 100vh;
+  background: #d60000 url("../../assets/LycheeBg.png") center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0 15px;
+}
+
+
+@keyframes waterLycheeLeftIn {
+  from { opacity: 0; transform: translateX(-150px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes waterLycheeRightIn {
+  from { opacity: 0; transform: translateX(150px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Heading */
+.lychee-text {
+  position: absolute;
+  color: #fff;
+  z-index: 2;
+  text-align: center;
+}
+.lychee-text h1 {
+ margin-top: -200px;
+    margin-bottom: 0;
+    font-weight: 700;
+    font-size: 130px;
+    text-align: center;
+    line-height: 1;
+    animation: fadeUpCola 1.2s 
+ease forwards;
+}
+
+.bottom-lychee-text span{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  margin: 0;
+}
+
+.lychee-heading-img {
+  width: 150px;
+}
+
+.mid-lychee-text {
+  position: absolute;
+  left: 26%;
+  bottom: -20px;
+  margin: 0;
+  font-weight: 700;
+  font-size: 90px;
+  animation: fadeInCola 1.2s ease 0.5s forwards;
+}
+
+.bottom-lychee-text {
+  position: absolute;
+    right: 200px;
+    /* bottom: -70px; */
+    text-align: left;
+    margin-top: -20px;
+    font-weight: 700;
+    font-size: 70px;
+  animation: slideUpCola 1.2s ease forwards;
+}
+
+/* Animations */
+@keyframes slideDownLychee {
+  from { opacity: 0; transform: translateY(-40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideUpLychee {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeUpLychee {
+  from { opacity: 0; transform: translateY(80px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInLychee {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Bottle */
+.bottle-lychee-wrap {
+  position: relative;
+  z-index: 3;
+  margin-top: 100px;
+}
+.bottle-lychee {
+  width: 130px;
+  height: auto;
+  animation: bottleInLychee 1.5s ease forwards;
+}
+.lychee-fruit{
+  position: absolute;
+  width: 200px;
+  bottom: 0px;
+  z-index: 3;
+  animation: fruitInLemon 1.5s ease forwards;
+
+}
+@keyframes bottleInLychee {
+  from { opacity: 0; transform: translateY(150px) scale(0.6); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Ice cubes */
+.lychee {
+  position: absolute;
+  width: 120px;
+  opacity: 0.9;
+  animation: floatIceLychee 4s ease-in-out infinite;
+}
+.lychee-top { top: 30px; right: -100px; }
+.lychee-bottom { bottom: 120px; left: -120px; }
+@keyframes floatIceLychee {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(5deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* Mouse scroll */
+.mouse-lychee {
+  position: absolute;
+  bottom: 20px;
+  width: 35px;
+  animation: mouseLycheeAnim 1.5s infinite ease-in-out;
+}
+@keyframes mouseLycheeAnim {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+  100% { transform: translateY(0); }
+}

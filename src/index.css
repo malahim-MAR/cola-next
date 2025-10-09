@@ -1,0 +1,8 @@
+/* make sure no horizontal scroll at all */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden !important;
+  /* width: 100%; */
+  overflow-y: hidden !important;
+}

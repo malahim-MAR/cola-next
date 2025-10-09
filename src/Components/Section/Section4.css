@@ -1,0 +1,71 @@
+.hero4 {
+  position: relative;
+  height: 100vh;
+  background: #d60000 url("../../assets/StormBg.png") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0 15px;
+}
+
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  /* gap: 50px; */
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+}
+
+.hero-left h1,
+.hero-right h1 {
+  font-size: 90px;
+  font-weight: 700;
+  line-height: 1.1;
+  text-align: left;
+}
+.hero-right h1 {
+  text-align: right;
+}
+.hero-left span,
+.hero-right span {
+  font-size: 40px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.hero-center {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+.bottle {
+  width: 130px;
+  animation: bottleIn 1.5s ease forwards;
+}
+.ice {
+  position: absolute;
+  width: 120px;
+  opacity: 0.9;
+  animation: floatIce 4s ease-in-out infinite;
+}
+.ice-top { top: -40px; right: -80px; }
+.ice-bottom { bottom: -60px; left: -80px; }
+
+.mouse {
+  position: absolute;
+  bottom: 20px;
+  width: 35px;
+  animation: mouseAnim 1.5s infinite ease-in-out;
+}
+
+@keyframes waterLeftIn { from { opacity: 0; transform: translateX(-150px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes waterRightIn { from { opacity: 0; transform: translateX(150px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes bottleIn { from { opacity: 0; transform: translateY(150px) scale(0.6); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes floatIce { 0% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-10px) rotate(5deg); } 100% { transform: translateY(0) rotate(0deg); } }
+@keyframes mouseAnim { 0% { transform: translateY(0); } 50% { transform: translateY(10px); } 100% { transform: translateY(0); } }

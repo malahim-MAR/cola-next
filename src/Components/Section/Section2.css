@@ -1,0 +1,133 @@
+.lemon-section {
+  position: relative;
+  /* width: 100%; */
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Background */
+.lemon-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Bottle + Fruits */
+.lemon-bottle-wrap {
+  position: relative;
+  z-index: 3;
+  margin-top: 100px;
+}
+.lemon-bottle-fruits {
+  width: 130px;
+  height: auto;
+
+  animation: bottleInCola 1.5s ease forwards;
+  filter: drop-shadow(0px 15px 25px rgba(0, 0, 0, 0.4));
+}
+
+/* Leaves */
+.lemon-leaf {
+  position: absolute;
+  width: 150px;
+  z-index: 2;
+}
+.lemon-left-leaf {
+  bottom: 120px;
+  left: 8%;
+  transform: rotate(-15deg);
+}
+.lemon-right-leaf {
+  bottom: 120px;
+  right: 8%;
+  transform: rotate(15deg);
+}
+
+.lemon-fruit{
+  position: absolute;
+  width: 200px;
+  bottom: 50px;
+  z-index: 3;
+  animation: fruitInLemon 1.5s ease forwards;
+
+}
+
+/* Heading */
+.lemon-text {
+  position: absolute;
+  color: #fff;
+  z-index: 2;
+  text-align: center;
+}
+.lemon-text h1 {
+ margin-top: -200px;
+    margin-bottom: 0;
+    font-weight: 700;
+    font-size: 130px;
+    text-align: center;
+    line-height: 1;
+    animation: fadeUpCola 1.2s 
+ease forwards;
+}
+
+.bottom-lemon-text span{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  margin: 0;
+}
+
+.lemon-heading-img {
+  width: 150px;
+}
+
+.mid-lemon-text {
+  position: absolute;
+  left: 26%;
+  bottom: -20px;
+  margin: 0;
+  font-weight: 700;
+  font-size: 90px;
+  animation: fadeInCola 1.2s ease 0.5s forwards;
+}
+
+.bottom-lemon-text {
+  position: absolute;
+    right: 200px;
+    /* bottom: -70px; */
+    text-align: left;
+    margin-top: -20px;
+    font-weight: 700;
+    font-size: 70px;
+  animation: slideUpCola 1.2s ease forwards;
+}
+
+
+
+/* Mouse Scroll */
+.lemon-mouse {
+  position: absolute;
+  bottom: 20px;
+  width: 40px;
+  z-index: 5;
+  animation: lemon-bounce 1.5s infinite ease-in-out;
+}
+@keyframes lemon-bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

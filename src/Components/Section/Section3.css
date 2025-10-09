@@ -1,0 +1,163 @@
+.orange-hero {
+  position: relative;
+  /* width: 100%; */
+  height: 100vh; /* full screen height */
+  background: #d60000 url("../../assets/OrangeBg.png") center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* prevent scrollbars */
+  padding: 0 15px;
+}
+
+/* Text container */
+.orange-text {
+  position: absolute;
+  color: #fff;
+  z-index: 2;
+  text-align: center;
+}
+
+/* Cola Next (center big) */
+.orange-text h1 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 160px;
+  text-align: center;
+  line-height: 1;
+  animation: orange-fadeUp 1.2s ease forwards;
+}
+
+/* Kyun ke (top-left relative to Cola Next) */
+.orange-top-text {
+  position: absolute;
+  left: -120px;
+  top: -40px;
+  margin: 0;
+  font-weight: 700;
+  font-size: 48px;
+  animation: orange-slideDown 1.2s ease forwards;
+}
+
+/* Hai (center-bottom of Cola Next) */
+.orange-mid-text {
+  position: absolute;
+  left: 35%;
+  bottom: -40px;
+  margin: 0;
+  font-weight: 700;
+  font-size: 48px;
+  animation: orange-fadeIn 1.2s ease 0.5s forwards;
+}
+
+/* Pakistani! (bottom-right relative to Cola Next) */
+.orange-bottom-text {
+  position: absolute;
+  right: -150px;
+  bottom: -70px;
+  margin: 0;
+  font-weight: 700;
+  font-size: 96px;
+  animation: orange-slideUp 1.2s ease forwards;
+}
+
+/* Animations */
+@keyframes orange-slideDown {
+  from { opacity: 0; transform: translateY(-40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes orange-slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes orange-fadeUp {
+  from { opacity: 0; transform: translateY(80px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes orange-fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Bottle */
+.orange-bottle-wrap {
+  position: relative;
+  z-index: 3;
+  margin-top: 100px;
+}
+.orange-bottle {
+  width: 140px;
+  height: auto;
+  animation: orange-bottleIn 1.5s ease forwards;
+}
+@keyframes orange-bottleIn {
+  from { opacity: 0; transform: translateY(150px) scale(0.6); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Ice cubes */
+.orange-ice {
+  position: absolute;
+  width: 120px;
+  opacity: 0.9;
+  animation: orange-floatIce 4s ease-in-out infinite;
+}
+.orange-ice-top {
+  top: 30px;
+  right: -100px;
+}
+.orange-ice-bottom {
+  bottom: 120px;
+  left: -120px;
+}
+@keyframes orange-floatIce {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(5deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* Mouse scroll */
+.orange-mouse {
+  position: absolute;
+  bottom: 20px;
+  width: 35px;
+  animation: orange-mouseAnim 1.5s infinite ease-in-out;
+}
+@keyframes orange-mouseAnim {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+  100% { transform: translateY(0); }
+}
+
+/* ===================== RESPONSIVE ===================== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .orange-text h1 { font-size: 110px; }
+  .orange-top-text { font-size: 36px; left: -80px; top: -30px; }
+  .orange-mid-text { font-size: 36px; left: 30%; bottom: -30px; }
+  .orange-bottom-text { font-size: 64px; right: -100px; bottom: -50px; }
+  .orange-bottle { width: 110px; }
+  .orange-ice { width: 90px; }
+}
+
+/* Mobile Landscape */
+@media (max-width: 768px) {
+  .orange-text h1 { font-size: 70px; }
+  .orange-top-text { font-size: 28px; left: -50px; top: -20px; }
+  .orange-mid-text { font-size: 28px; left: 25%; bottom: -20px; }
+  .orange-bottom-text { font-size: 42px; right: -50px; bottom: -30px; }
+  .orange-bottle { width: 90px; }
+  .orange-ice { width: 70px; }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+  .orange-text h1 { font-size: 48px; }
+  .orange-top-text { font-size: 20px; left: -30px; top: -10px; }
+  .orange-mid-text { font-size: 20px; left: 22%; bottom: -15px; }
+  .orange-bottom-text { font-size: 28px; right: -30px; bottom: -20px; }
+  .orange-bottle { width: 70px; }
+  .orange-ice { width: 50px; }
+  .orange-mouse { width: 25px; }
+}

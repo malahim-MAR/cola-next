@@ -1,0 +1,119 @@
+.dare-hero {
+  position: relative;
+  height: 100vh;
+  background: #d60000 url("../../assets/DewBg.png") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0 15px;
+}
+
+/* Text container */
+.dare-text {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+/* ✅ TOP heading goes behind bottle */
+.top-dare-text {
+  font-size: 140px;
+  font-weight: 700;
+  z-index: 1;          /* behind bottle */
+  position: relative;  /* for z-index to work */
+  margin: 0;
+}
+
+.top-dare-text span {
+  color: #F6FF00;
+}
+
+/* ✅ BOTTOM heading comes in front of bottle */
+.bottom-dare-text {
+  font-size: 140px;
+  font-weight: 700;
+  margin-top: 10px;
+  z-index: 4;          /* above bottle */
+  position: relative;
+  margin-left: 200px;
+  margin-top: 0;
+}
+
+.bottom-dare-text span {
+  color: #F6FF00;
+}
+
+
+.dare-bottle-wrap {
+  position: relative;
+  z-index: 3;          
+  margin-top: 100px;
+}
+
+.dare-bottle {
+  width: 130px;
+  height: auto;
+  animation: dare-bottleIn 1.5s ease forwards;
+}
+
+.dare-ice {
+  position: absolute;
+  width: 150px;
+  opacity: 0.9;
+  animation: dare-floatIce 4s ease-in-out infinite;
+}
+.dare-ice-top {
+  top: 20px;
+  right: -150px;
+}
+.dare-ice-bottom {
+  bottom: 50px;
+  left: -200px;
+}
+
+.dare-mouse {
+  position: absolute;
+  bottom: 20px;
+  width: 35px;
+  animation: dare-mouseAnim 1.5s infinite ease-in-out;
+}
+
+/* Animations */
+@keyframes dare-bottleIn {
+  from { opacity: 0; transform: translateY(150px) scale(0.6); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes dare-floatIce {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(5deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+@keyframes dare-mouseAnim {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+  100% { transform: translateY(0); }
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 1024px) {
+  .top-dare-text, .bottom-dare-text { font-size: 60px; }
+  .dare-bottle { width: 110px; }
+  .dare-ice { width: 90px; }
+}
+
+@media (max-width: 768px) {
+  .top-dare-text, .bottom-dare-text { font-size: 48px; }
+  .dare-bottle { width: 90px; }
+  .dare-ice { width: 70px; }
+}
+
+@media (max-width: 480px) {
+  .top-dare-text, .bottom-dare-text { font-size: 36px; }
+  .dare-bottle { width: 70px; }
+  .dare-ice { width: 50px; }
+  .dare-mouse { width: 25px; }
+}

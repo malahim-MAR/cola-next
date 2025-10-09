@@ -1,0 +1,121 @@
+/* Navbar */
+nav.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+  z-index: 1000;
+  background: transparent;
+}
+
+/* Logo */
+.logo img {
+  width: 120px;
+  object-fit: contain;
+}
+
+/* Search Bar */
+.search-box {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.search-box input {
+  width: 60%;
+  max-width: 600px;
+  padding: 12px 20px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Hamburger */
+.hamburger {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px;
+  z-index: 1100;
+  transition: all 0.3s ease;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  background: #fff;
+  transition: right 0.4s ease-in-out;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+/* Close Button */
+.sidebar .close-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-bottom: 40px;
+}
+
+/* Sidebar Links */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  font-size: 36px;
+  font-weight: 600;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  color: #000;
+  transition: color 0.2s;
+}
+
+.sidebar ul li:hover {
+  color: #e40000;
+}

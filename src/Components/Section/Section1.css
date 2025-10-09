@@ -1,0 +1,195 @@
+.hero-cola {
+  position: relative;
+  /* width: 100%; */
+  height: 100vh; /* full screen height */
+  background: #d60000 url("../../assets/ColaBg.png") center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* prevent scrollbars */
+  padding: 0 15px;
+}
+
+/* Water splashes */
+.water-cola {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  max-width: 45%;
+  opacity: 0;
+}
+.water-cola-left {
+  left: -200px;
+  animation: waterColaLeftIn 1.5s ease forwards;
+}
+.water-cola-right {
+  right: -200px;
+  animation: waterColaRightIn 1.5s ease forwards;
+}
+@keyframes waterColaLeftIn {
+  from {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes waterColaRightIn {
+  from {
+    opacity: 0;
+    transform: translateX(150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Text container */
+.hero-cola-text {
+  position: absolute;
+  color: #fff;
+  z-index: 2;
+  text-align: center; 
+}
+
+/* Cola Next (center big) */
+.hero-cola-text h1 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 160px;
+  text-align: center;
+  line-height: 1;
+  animation: fadeUpCola 1.2s ease forwards;
+}
+
+/* Kyun ke */
+.top-cola-text {
+  position: absolute;
+  left: 100px;
+  top: -40px;
+  margin: 0;
+  font-weight: 700;
+  font-size: 48px;
+  animation: slideDownCola 1.2s ease forwards;
+}
+
+/* Hai */
+.mid-cola-text {
+  position: absolute;
+  left: 30%;
+  bottom: -40px;
+  margin: 0;
+  font-weight: 700;
+  font-size: 48px;
+  animation: fadeInCola 1.2s ease 0.5s forwards;
+}
+
+/* Pakistani! */
+.bottom-cola-text {
+  position: absolute;
+  right: -150px;
+  bottom: -70px;
+  margin: 0;
+  font-weight: 700;
+  font-size: 96px;
+  animation: slideUpCola 1.2s ease forwards;
+}
+
+/* Animations */
+@keyframes slideDownCola {
+  from { opacity: 0; transform: translateY(-40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideUpCola {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeUpCola {
+  from { opacity: 0; transform: translateY(80px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInCola {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Bottle */
+.bottle-cola-wrap {
+  position: relative;
+  z-index: 3;
+  margin-top: 100px;
+}
+.bottle-cola {
+  width: 130px;
+  height: auto;
+  
+  animation: bottleInCola 1.5s ease forwards;
+}
+@keyframes bottleInCola {
+  from { opacity: 0; transform: translateY(150px) scale(0.6); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Ice cubes */
+.ice-cola {
+  position: absolute;
+  width: 100px;
+  opacity: 0.9;
+  animation: floatIceCola 4s ease-in-out infinite;
+}
+.ice-cola-top {
+  top: 30px;
+  right: -100px;
+}
+.ice-cola-bottom {
+  bottom: 50px;
+  left: -200px;
+}
+@keyframes floatIceCola {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(5deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* Mouse scroll */
+.mouse-cola {
+  position: absolute;
+  bottom: 20px;
+  width: 35px;
+  animation: mouseColaAnim 1.5s infinite ease-in-out;
+}
+@keyframes mouseColaAnim {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+  100% { transform: translateY(0); }
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 1024px) {
+  .hero-cola-text h1 { font-size: 110px; }
+  .top-cola-text { font-size: 36px; left: -80px; top: -30px; }
+  .mid-cola-text { font-size: 36px; left: 30%; bottom: -30px; }
+  .bottom-cola-text { font-size: 64px; right: -100px; bottom: -50px; }
+  .bottle-cola { width: 110px; }
+  .ice-cola { width: 90px; }
+}
+@media (max-width: 768px) {
+  .hero-cola-text h1 { font-size: 70px; }
+  .top-cola-text { font-size: 28px; left: -50px; top: -20px; }
+  .mid-cola-text { font-size: 28px; left: 25%; bottom: -20px; }
+  .bottom-cola-text { font-size: 42px; right: -50px; bottom: -30px; }
+  .bottle-cola { width: 90px; }
+  .ice-cola { width: 70px; }
+}
+@media (max-width: 480px) {
+  .hero-cola-text h1 { font-size: 48px; }
+  .top-cola-text { font-size: 20px; left: -30px; top: -10px; }
+  .mid-cola-text { font-size: 20px; left: 22%; bottom: -15px; }
+  .bottom-cola-text { font-size: 28px; right: -30px; bottom: -20px; }
+  .bottle-cola { width: 70px; }
+  .ice-cola { width: 50px; }
+  .mouse-cola { width: 25px; }
+}

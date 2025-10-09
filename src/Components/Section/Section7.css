@@ -1,0 +1,101 @@
+.hero-fizzup {
+  position: relative;
+  height: 100vh;
+  background: #008c4a url("../../assets/GreenSodaBg.png") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0 15px;
+}
+
+/* Water splashes */
+.water-fizzup {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  max-width: 45%;
+  opacity: 0;
+}
+.water-fizzup-left { left: 0; animation: waterFizzupLeftIn 1.5s ease forwards; }
+.water-fizzup-right { right: 0; animation: waterFizzupRightIn 1.5s ease forwards; }
+
+@keyframes waterFizzupLeftIn {
+  from { opacity: 0; transform: translateX(-150px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes waterFizzupRightIn {
+  from { opacity: 0; transform: translateX(150px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Content grid */
+.hero-fizzup-content {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  /* gap: 50px; */
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+}
+
+.hero-fizzup-left{
+  text-align: right;
+}
+.hero-fizzup-right{
+  text-align: left;
+}
+
+
+.hero-fizzup-left h1,
+.hero-fizzup-right h1 {
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+
+/* Bottle Center */
+.hero-fizzup-center {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+.bottle-fizzup {
+  width: 130px;
+  animation: bottleFizzupIn 1.5s ease forwards;
+}
+.ice-fizzup {
+  position: absolute;
+  width: 150px;
+  opacity: 0.9;
+  animation: floatIceFizzup 4s ease-in-out infinite;
+}
+.ice-fizzup-top { top: 0px; left: 270px }
+.ice-fizzup-bottom { bottom: -20px; left: -200px; }
+
+@keyframes bottleFizzupIn {
+  from { opacity: 0; transform: translateY(150px) scale(0.6); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes floatIceFizzup {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(5deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* Mouse scroll */
+.mouse-fizzup {
+  position: absolute;
+  bottom: 20px;
+  width: 35px;
+  animation: mouseFizzupAnim 1.5s infinite ease-in-out;
+}
+@keyframes mouseFizzupAnim {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+  100% { transform: translateY(0); }
+}
