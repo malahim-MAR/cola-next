@@ -1,6 +1,6 @@
 /* ===== NAVBAR ===== */
 .navbar-full {
-    max-width: 100%;
+    width: 100%;
     background: #e30613;
 
 }
@@ -8,14 +8,15 @@
 nav.navbar {
     position: fixed;
     top: 0;
-    width: 1600px;
+    max-width: 1600px;
     height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 25px;
     z-index: 1000;
-    background: #e30613;
+    background: transparent;
+    margin: 0 auto;
     /* Cola Red */
     color: #fff;
     font-family: "Poppins", sans-serif;
@@ -32,6 +33,7 @@ nav.navbar {
     flex: 1;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .search-box input {
