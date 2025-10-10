@@ -1,21 +1,19 @@
 import React, { useEffect } from "react";
-import "./Testing.css";
-import bottle from "../assets/LemonBottle.png";
-import ice2 from "../assets/ice1.png";
-import ice1 from "../assets/ice2.png";
-import mouse from "../assets/mouse.png";
-import Navbar from "../Components/MalahimNavbar/Navbar";
+import "./Slide1.css";
+import bottle from "../../assets/cola-bottle.png";
+import ice2 from "../../assets/ice1.png";
+import ice1 from "../../assets/ice2.png";
+import mouse from "../../assets/mouse.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const Testing = () => {
+const Slide1 = () => {
     useEffect(() => {
         AOS.init({ duration: 1200, once: true });
     }, []);
 
     return (
         <>
-            <Navbar />
             <section className="hero-cola">
                 {/* Text */}
                 <div className="hero-cola-text">
@@ -47,4 +45,4 @@ const Testing = () => {
     );
 };
 
-export default Testing;
+export default Slide1;

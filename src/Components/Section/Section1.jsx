@@ -4,7 +4,7 @@ import bottle from "../../assets/cola-bottle.png";
 import ice2 from "../../assets/ice1.png";
 import ice1 from "../../assets/ice2.png";
 import mouse from "../../assets/mouse.png";
- 
+
 const Section1 = () => {
   return (
     <section className="hero-cola">

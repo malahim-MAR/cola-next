@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-import Navbar from "../Components/Navbar/Navbar";
+import Navbar from "../Components/MalahimNavbar/Navbar";
 
 import Section1 from "../Components/Section/Section1";
 import Section2 from "../Components/Section/Section2";
@@ -10,6 +10,7 @@ import Section5 from "../Components/Section/Section5";
 import Section6 from "../Components/Section/Section6";
 import Section7 from "../Components/Section/Section7";
 import Section8 from "../Components/Section/Section8";
+import Slide1 from "../Components/Slide-1/slide1";
 
 export default function Home() {
   return (
@@ -22,7 +23,7 @@ export default function Home() {
         {/* Snap Scroll Wrapper */}
         <div className="snap-wrapper">
           <section className="snap-section">
-            <Section1 />
+            <Slide1 />
           </section>
           <section className="snap-section">
             <Section2 />

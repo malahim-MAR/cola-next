@@ -4,7 +4,7 @@ body {
   padding: 0;
   height: 100%;
   overflow-x: hidden;
-  font-family: "Arial", sans-serif;
+  font-family: "Inter", sans-serif;
   background: #000;
   color: #fff;
   scroll-behavior: smooth;
@@ -22,10 +22,10 @@ nav.navbar {
   top: 0;
   left: 0;
   right: 0;
-  height: 60px;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(5px);
-  z-index: 1000;
+  /* height: 60px; */
+  /* background: rgba(0, 0, 0, 0.6); */
+  /* backdrop-filter: blur(5px); */
+  /* z-index: 1000; */
 }
 
 /* Snap Scroll wrapper */

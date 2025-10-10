@@ -1,0 +1,199 @@
+/* ===== NAVBAR ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.navbar-full {
+    width: 100%;
+    background: transparent;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    max-width: 1600px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 10 25px;
+    z-index: 1000;
+    color: #fff;
+    font-family: "Inter", sans-serif;
+}
+
+/* ===== LOGO ===== */
+.logo img {
+    width: 120px;
+    object-fit: contain;
+}
+
+/* ===== SEARCH BOX ===== */
+.search-box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-box input {
+    width: 60%;
+    max-width: 600px;
+    padding: 12px 20px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: #fff;
+    color: #000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.search-box input:focus {
+    width: 65%;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== HAMBURGER ===== */
+.hamburger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px;
+}
+
+.hamburger span {
+    width: 28px;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+}
+
+/* ===== OVERLAY ===== */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    z-index: 2000;
+    padding-top: 100px;
+}
+
+.overlay.active {
+    opacity: 1;
+    pointer-events: all;
+    /* width: 1600px; */
+}
+
+/* ===== CLOSE BUTTON ===== */
+.close-btn {
+    position: absolute;
+    top: 40px;
+    right: 80px;
+    background: none;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: #000;
+}
+
+/* ===== MENU WRAPPER ===== */
+.menu-wrapper {
+    display: flex;
+    width: 85%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 100px;
+}
+
+/* ===== LEFT SIDE MENU ===== */
+.menu-left {
+    flex: 0.8;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.menu-item {
+    font-size: 38px;
+    font-weight: medium;
+    padding: 25px 0;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.menu-item:hover,
+.menu-item.active {
+    color: #e30613;
+}
+
+/* ===== RIGHT SIDE MENU ===== */
+.menu-right {
+    flex: 1.5;
+}
+
+.menu-right ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-right ul li {
+    font-size: 32px;
+    font-weight: 400;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 25px 0;
+
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.menu-right ul li:hover {
+    color: #e30613;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+    .menu-wrapper {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .menu-item {
+        font-size: 22px;
+    }
+
+    .menu-right ul li {
+        font-size: 18px;
+    }
+
+    .close-btn {
+        right: 40px;
+        top: 30px;
+    }
+}
