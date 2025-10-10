@@ -1,37 +1,35 @@
-.hero-cola {
+.hero-lemon {
     /* position: relative; */
     height: 100vh;
     /* width: 100%; */
-    background: #d60000 url("../assets/ColaBg.png") center center / cover no-repeat;
+    background: #d60000 url("../../assets/lemonBg.png") center center / cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     overflow: hidden;
     padding: 0 15px;
 }
 
 /* Text */
-.hero-cola-text {
+.hero-lemon-text {
     position: absolute;
     color: #fff;
     text-align: center;
     z-index: 2;
 }
 
-.hero-cola-text h1 {
+.hero-lemon-text h1 {
     margin: 0;
     font-weight: 700;
     font-size: 160px;
     line-height: 1;
 }
 
-.hero-cola-text h1 span {
+.hero-lemon-text h1 span {
     color: #ffef9f;
 }
 
-.top-cola-text {
+.top-lemon-text {
     position: absolute;
     left: 100px;
     top: -40px;
@@ -40,7 +38,7 @@
     font-size: 48px;
 }
 
-.mid-cola-text {
+.mid-lemon-text {
     position: absolute;
     left: 30%;
     bottom: -40px;
@@ -49,7 +47,7 @@
     font-size: 48px;
 }
 
-.bottom-cola-text {
+.bottom-lemon-text {
     position: absolute;
     right: -150px;
     bottom: -80px;
@@ -59,36 +57,36 @@
 }
 
 /* Bottle */
-.bottle-cola-wrap {
+.bottle-lemon-wrap {
     position: relative;
     z-index: 3;
     margin-top: 100px;
 }
 
-.bottle-cola {
+.bottle-lemon {
     width: 130px;
     height: auto;
 }
 
 /* Ice */
-.ice-cola {
+.ice-lemon {
     position: absolute;
     width: 150px;
     opacity: 0.9;
-    animation: floatIceCola 4s ease-in-out infinite;
+    animation: floatIcelemon 4s ease-in-out infinite;
 }
 
-.ice-cola-top {
+.ice-lemon-top {
     top: 0px;
     right: -150px;
 }
 
-.ice-cola-bottom {
+.ice-lemon-bottom {
     bottom: 50px;
     left: -200px;
 }
 
-@keyframes floatIceCola {
+@keyframes floatIcelemon {
     0% {
         transform: translateY(0) rotate(0deg);
     }
@@ -103,14 +101,14 @@
 }
 
 /* Mouse Scroll */
-.mouse-cola {
+.mouse-lemon {
     position: absolute;
     bottom: 20px;
     width: 35px;
-    animation: mouseColaAnim 1.5s infinite ease-in-out;
+    animation: mouselemonAnim 1.5s infinite ease-in-out;
 }
 
-@keyframes mouseColaAnim {
+@keyframes mouselemonAnim {
     0% {
         transform: translateY(0);
     }
@@ -126,92 +124,92 @@
 
 /* ========== Responsive ========== */
 @media (max-width: 1024px) {
-    .hero-cola-text h1 {
+    .hero-lemon-text h1 {
         font-size: 110px;
     }
 
-    .top-cola-text {
+    .top-lemon-text {
         font-size: 36px;
         left: -80px;
     }
 
-    .mid-cola-text {
+    .mid-lemon-text {
         font-size: 36px;
         left: 30%;
     }
 
-    .bottom-cola-text {
+    .bottom-lemon-text {
         font-size: 64px;
         right: -100px;
     }
 
-    .bottle-cola {
+    .bottle-lemon {
         width: 110px;
     }
 
-    .ice-cola {
+    .ice-lemon {
         width: 90px;
     }
 }
 
 @media (max-width: 768px) {
-    .hero-cola-text h1 {
+    .hero-lemon-text h1 {
         font-size: 70px;
     }
 
-    .top-cola-text {
+    .top-lemon-text {
         font-size: 28px;
         left: -50px;
     }
 
-    .mid-cola-text {
+    .mid-lemon-text {
         font-size: 28px;
         left: 25%;
     }
 
-    .bottom-cola-text {
+    .bottom-lemon-text {
         font-size: 42px;
         right: -50px;
     }
 
-    .bottle-cola {
+    .bottle-lemon {
         width: 90px;
     }
 
-    .ice-cola {
+    .ice-lemon {
         width: 70px;
     }
 }
 
 @media (max-width: 480px) {
-    .hero-cola-text h1 {
+    .hero-lemon-text h1 {
         font-size: 48px;
     }
 
-    .top-cola-text {
+    .top-lemon-text {
         font-size: 20px;
         left: -30px;
     }
 
-    .mid-cola-text {
+    .mid-lemon-text {
         font-size: 20px;
         left: 22%;
     }
 
-    .bottom-cola-text {
+    .bottom-lemon-text {
         font-size: 28px;
         right: -30px;
     }
 
-    .bottle-cola {
+    .bottle-lemon {
         width: 70px;
     }
 
-    .ice-cola {
+    .ice-lemon {
         width: 50px;
     }
 
-    .mouse-cola {
+    .mouse-lemon {
         width: 25px;
     }
 }

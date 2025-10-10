@@ -1,16 +1,14 @@
 import React from "react";
 import "./Home.css";
 import Navbar from "../Components/MalahimNavbar/Navbar";
-
-import Section1 from "../Components/Section/Section1";
-import Section2 from "../Components/Section/Section2";
-import Section3 from "../Components/Section/Section3";
-import Section4 from "../Components/Section/Section4";
-import Section5 from "../Components/Section/Section5";
-import Section6 from "../Components/Section/Section6";
-import Section7 from "../Components/Section/Section7";
-import Section8 from "../Components/Section/Section8";
 import Slide1 from "../Components/Slide-1/slide1";
+import Slide2 from "../Components/Slide-2/Slide2";
+import Slide3 from "../Components/Slide-3/Slide3";
+import Slide4 from "../Components/Slide-4/Slide4";
+import Slide5 from "../Components/Slide-5/Slide5";
+import Slide6 from "../Components/Slide-6/Slide6";
+import Slide7 from "../Components/Slide-7/Slide7";
+import Slide8 from "../Components/Slide-8/Slide8";
 
 export default function Home() {
   return (
@@ -26,25 +24,25 @@ export default function Home() {
             <Slide1 />
           </section>
           <section className="snap-section">
-            <Section2 />
+            <Slide2 />
           </section>
           <section className="snap-section">
-            <Section3 />
+            <Slide3 />
           </section>
           <section className="snap-section">
-            <Section4 />
+            <Slide4 />
           </section>
           <section className="snap-section">
-            <Section5 />
+            <Slide5 />
           </section>
           <section className="snap-section">
-            <Section6 />
+            <Slide6 />
           </section>
           <section className="snap-section">
-            <Section7 />
+            <Slide7 />
           </section>
           <section className="snap-section">
-            <Section8 />
+            <Slide8 />
           </section>
         </div>
       </div>
