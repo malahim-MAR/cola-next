@@ -1,21 +1,21 @@
 .hero-lemon {
-    /* position: relative; */
+    position: relative;
     height: 100vh;
-    /* width: 100%; */
-    background: #d60000 url("../../assets/lemonBg.png") center center / cover no-repeat;
+    background: #f6e600 url("../../assets/LemonBg.png") center center / cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     padding: 0 15px;
+    z-index: 2;
+    /* Higher than cola */
 }
 
-/* Text */
 .hero-lemon-text {
     position: absolute;
-    color: #fff;
+    color: #004400;
     text-align: center;
-    z-index: 2;
+    z-index: 3;
 }
 
 .hero-lemon-text h1 {
@@ -26,46 +26,62 @@
 }
 
 .hero-lemon-text h1 span {
-    color: #ffef9f;
+    color: #ffee00;
 }
 
 .top-lemon-text {
+    position: relative;
+    left: 0px;
+    top: -170px;
+    font-size: 128px;
+    color: white;
+    font-weight: 700;
+}
+
+.top-lemon-text span {
+    letter-spacing: -6%;
+
+}
+
+.left-lemon-text {
     position: absolute;
     left: 100px;
-    top: -40px;
-    margin: 0;
+    top: -50px;
+    font-size: 128px;
+    color: white;
     font-weight: 700;
-    font-size: 48px;
+}
+
+.left-lemon-text span {
+    letter-spacing: -6%;
+
 }
 
 .mid-lemon-text {
     position: absolute;
     left: 30%;
     bottom: -40px;
-    margin: 0;
-    font-weight: 700;
     font-size: 48px;
+    font-weight: 700;
 }
 
 .bottom-lemon-text {
     position: absolute;
     right: -150px;
     bottom: -80px;
-    margin: 0;
-    font-weight: 700;
     font-size: 96px;
+    font-weight: 700;
 }
 
 /* Bottle */
 .bottle-lemon-wrap {
     position: relative;
-    z-index: 3;
+    z-index: 4;
     margin-top: 100px;
 }
 
 .bottle-lemon {
     width: 130px;
-    height: auto;
 }
 
 /* Ice */
@@ -73,7 +89,7 @@
     position: absolute;
     width: 150px;
     opacity: 0.9;
-    animation: floatIcelemon 4s ease-in-out infinite;
+    animation: floatIceLemon 4s ease-in-out infinite;
 }
 
 .ice-lemon-top {
@@ -86,7 +102,7 @@
     left: -200px;
 }
 
-@keyframes floatIcelemon {
+@keyframes floatIceLemon {
     0% {
         transform: translateY(0) rotate(0deg);
     }
@@ -105,10 +121,10 @@
     position: absolute;
     bottom: 20px;
     width: 35px;
-    animation: mouselemonAnim 1.5s infinite ease-in-out;
+    animation: mouseLemonAnim 1.5s infinite ease-in-out;
 }
 
-@keyframes mouselemonAnim {
+@keyframes mouseLemonAnim {
     0% {
         transform: translateY(0);
     }
@@ -119,97 +135,5 @@
 
     100% {
         transform: translateY(0);
-    }
-}
-
-/* ========== Responsive ========== */
-@media (max-width: 1024px) {
-    .hero-lemon-text h1 {
-        font-size: 110px;
-    }
-
-    .top-lemon-text {
-        font-size: 36px;
-        left: -80px;
-    }
-
-    .mid-lemon-text {
-        font-size: 36px;
-        left: 30%;
-    }
-
-    .bottom-lemon-text {
-        font-size: 64px;
-        right: -100px;
-    }
-
-    .bottle-lemon {
-        width: 110px;
-    }
-
-    .ice-lemon {
-        width: 90px;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-lemon-text h1 {
-        font-size: 70px;
-    }
-
-    .top-lemon-text {
-        font-size: 28px;
-        left: -50px;
-    }
-
-    .mid-lemon-text {
-        font-size: 28px;
-        left: 25%;
-    }
-
-    .bottom-lemon-text {
-        font-size: 42px;
-        right: -50px;
-    }
-
-    .bottle-lemon {
-        width: 90px;
-    }
-
-    .ice-lemon {
-        width: 70px;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-lemon-text h1 {
-        font-size: 48px;
-    }
-
-    .top-lemon-text {
-        font-size: 20px;
-        left: -30px;
-    }
-
-    .mid-lemon-text {
-        font-size: 20px;
-        left: 22%;
-    }
-
-    .bottom-lemon-text {
-        font-size: 28px;
-        right: -30px;
-    }
-
-    .bottle-lemon {
-        width: 70px;
-    }
-
-    .ice-lemon {
-        width: 50px;
-    }
-
-    .mouse-lemon {
-        width: 25px;
     }
 }

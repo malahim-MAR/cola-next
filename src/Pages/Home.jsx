@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.css";
 import Navbar from "../Components/MalahimNavbar/Navbar";
-import Slide1 from "../Components/Slide-1/slide1";
+import Slide1 from "../Components/Slide-1/Slide1";
 import Slide2 from "../Components/Slide-2/Slide2";
 import Slide3 from "../Components/Slide-3/Slide3";
 import Slide4 from "../Components/Slide-4/Slide4";
