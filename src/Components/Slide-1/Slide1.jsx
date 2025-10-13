@@ -7,41 +7,92 @@ import ice2 from "../../assets/ice2.png";
 import mouse from "../../assets/mouse.png";
 
 const Slide1 = () => {
+    // Variants for smooth animation flow
+    const fadeZoom = {
+        hidden: { opacity: 0, scale: 0.9 },
+        visible: { opacity: 1, scale: 1, transition: { duration: 1.5, ease: "easeOut" } },
+    };
+const slideLeft = {
+  hidden: { x: -500, opacity: 0 },
+  visible: {
+    x: [-500, 0],
+    opacity: [0, 1],
+    transition: {
+      duration: 2,
+      ease: [0.45, 0, 0.55, 1], // slow start, smooth acceleration
+      delay: 0.1,
+    },
+  },
+};
+
+const slideRight = {
+  hidden: { x: 500, opacity: 0 },
+  visible: {
+    x: [500, 0],
+    opacity: [0, 1],
+    transition: {
+      duration: 2,
+      ease: [0.45, 0, 0.55, 1],
+      delay: 0.1,
+    },
+  },
+};
+
+
+
+
     return (
         <section className="hero-cola">
             {/* Text */}
             <div className="hero-cola-text">
                 <motion.h2
                     className="top-cola-text"
-                    initial={{ y: -50, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.6 }}
+                    variants={fadeZoom}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
                 >
                     Kyun ke
                 </motion.h2>
 
-                <motion.h1
-                    initial={{ scale: 0.8, opacity: 0 }}
-                    whileInView={{ scale: 1, opacity: 1 }}
-                    transition={{ duration: 0.8 }}
-                >
-                    Cola <span>Next</span>
-                </motion.h1>
+                <h1 className="hero-cola-heading">
+                    <motion.span
+                        className="cola-left"
+                        variants={slideLeft}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                    >
+                        Cola
+                    </motion.span>
+                    &nbsp;
+                    <motion.span
+                        className="next-right"
+                        variants={slideRight}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                    >
+                        Next
+                    </motion.span>
+                </h1>
 
                 <motion.h6
                     className="mid-cola-text"
-                    initial={{ y: 50, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.6 }}
+                    variants={fadeZoom}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
                 >
                     Hai
                 </motion.h6>
 
                 <motion.h2
                     className="bottom-cola-text"
-                    initial={{ y: 100, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.8 }}
+                    variants={fadeZoom}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
                 >
                     Pakistani!
                 </motion.h2>
@@ -50,23 +101,35 @@ const Slide1 = () => {
             {/* Bottle + Ice */}
             <motion.div
                 className="bottle-cola-wrap"
-                initial={{ opacity: 0, y: 60 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
+                variants={fadeZoom}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
             >
                 <img src={bottle} alt="Cola Bottle" className="bottle-cola" />
-                <img src={ice1} alt="Ice 1" className="ice-cola ice-cola-top" />
-                <img src={ice2} alt="Ice 2" className="ice-cola ice-cola-bottom" />
+                <motion.img
+                    src={ice1}
+                    alt=""
+                    className="ice-cola ice-cola-top"
+                    animate={{ y: [0, -10, 0] }}
+                    transition={{ duration: 4, ease: "easeInOut", repeat: Infinity }}
+                />
+                <motion.img
+                    src={ice2}
+                    alt=""
+                    className="ice-cola ice-cola-bottom"
+                    animate={{ y: [0, 10, 0] }}
+                    transition={{ duration: 4, ease: "easeInOut", repeat: Infinity }}
+                />
             </motion.div>
 
             {/* Mouse Scroll */}
             <motion.img
                 src={mouse}
-                alt="Scroll"
+                alt="Scroll Indicator"
                 className="mouse-cola"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
+                animate={{ y: [0, 10, 0] }}
+                transition={{ duration: 1.5, ease: "easeInOut", repeat: Infinity }}
             />
         </section>
     );
