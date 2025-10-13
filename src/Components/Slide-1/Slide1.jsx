@@ -12,14 +12,17 @@ const Slide1 = () => {
         hidden: { opacity: 0, scale: 0.9 },
         visible: { opacity: 1, scale: 1, transition: { duration: 1.5, ease: "easeOut" } },
     };
-const slideLeft = {
+
+
+ const slideLeft = {
   hidden: { x: -500, opacity: 0 },
   visible: {
-    x: [-500, 0],
-    opacity: [0, 1],
+    x: [-500, -480, 0], // slight start movement, pause, then complete
+    opacity: [0, 0.8, 1],
     transition: {
       duration: 2,
-      ease: [0.45, 0, 0.55, 1], // slow start, smooth acceleration
+      ease: [0.25, 1, 0.5, 1],
+      times: [0, 0.15, 1], // pause near start
       delay: 0.1,
     },
   },
@@ -28,15 +31,17 @@ const slideLeft = {
 const slideRight = {
   hidden: { x: 500, opacity: 0 },
   visible: {
-    x: [500, 0],
-    opacity: [0, 1],
+    x: [500, 480, 0], // same for right side
+    opacity: [0, 0.8, 1],
     transition: {
       duration: 2,
-      ease: [0.45, 0, 0.55, 1],
+      ease: [0.25, 1, 0.5, 1],
+      times: [0, 0.15, 1],
       delay: 0.1,
     },
   },
 };
+
 
 
 
