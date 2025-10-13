@@ -1,47 +1,181 @@
-import React, { useEffect } from "react";
+import React from "react";
+import { motion } from "framer-motion";
 import "./Slide3.css";
-import bottle from "../../assets/cola-bottle.png";
-import ice2 from "../../assets/ice1.png";
+import bottle from "../../assets/RangoBottle.png";
 import ice1 from "../../assets/ice2.png";
+import ice2 from "../../assets/ice1.png";
+import orange2 from "../../assets/orangeSlice.png";
+import leaf1 from "../../assets/leaf1.png";
 import mouse from "../../assets/mouse.png";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const Slide3 = () => {
-    useEffect(() => {
-        AOS.init({ duration: 1200, once: true });
-    }, []);
+    // === TEXT VARIANTS ===
+    const fadeUp = {
+        hidden: { y: -100, opacity: 0 },
+        visible: {
+            y: 0,
+            opacity: 1,
+            transition: { duration: 1.5, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] },
+        },
+    };
+
+    const fadeDown = {
+        hidden: { y: -50, opacity: 0 },
+        visible: {
+            y: 0,
+            opacity: 1,
+            transition: { duration: 1.2, delay: 0.1, ease: [0.25, 0.1, 0.25, 1] },
+        },
+    };
+
+    const fadeRight = {
+        hidden: { x: 200, opacity: 0 },
+        visible: {
+            x: 0,
+            opacity: 1,
+            transition: { duration: 1.5, delay: 0.3, ease: [0.22, 1, 0.36, 1] },
+        },
+    };
+
+    const fadeBottle = {
+        hidden: { opacity: 0, y: 50 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 1, delay: 0.2, ease: "easeOut" },
+        },
+    };
+
+    // === IMAGE VARIANTS ===
+    const fadeIn = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: { duration: 1.2, delay: 0.4, ease: "easeOut" },
+        },
+    };
+
+    const fromLeft = {
+        hidden: { x: -150, opacity: 0 },
+        visible: {
+            x: 0,
+            opacity: 1,
+            transition: { duration: 1.4, delay: 0.4, ease: [0.22, 1, 0.36, 1] },
+        },
+    };
+
+    const fromRight = {
+        hidden: { x: 150, opacity: 0 },
+        visible: {
+            x: 0,
+            opacity: 1,
+            transition: { duration: 1.4, delay: 0.4, ease: [0.22, 1, 0.36, 1] },
+        },
+    };
 
     return (
-        <>
-            <section className="hero-cola">
-                {/* Text */}
-                <div className="hero-cola-text">
-                    <h2 className="top-cola-text" data-aos="fade-down">
-                        Kyun ke
-                    </h2>
-                    <h1 data-aos="zoom-in">
-                        Cola <span>Next</span>
-                    </h1>
-                    <h6 className="mid-cola-text" data-aos="fade-up">
-                        Hai
-                    </h6>
-                    <h2 className="bottom-cola-text" data-aos="fade-up" data-aos-delay="200">
-                        Pakistani!
-                    </h2>
-                </div>
+        <section className="hero-rango">
+            <div className="hero-rango-text">
+                {/* === TEXT ANIMATIONS === */}
+                <motion.h2
+                    className="top-rango-text"
+                    variants={fadeDown}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                >
+                    <span>Zesty Sunshine</span>
+                </motion.h2>
 
-                {/* Bottle + Ice */}
-                <div className="bottle-cola-wrap" data-aos="zoom-in-up">
-                    <img src={bottle} alt="Cola Bottle" className="bottle-cola" />
-                    <img src={ice1} alt="Ice 1" className="ice-cola ice-cola-top" data-aos="fade-left" />
-                    <img src={ice2} alt="Ice 2" className="ice-cola ice-cola-bottom" data-aos="fade-left" />
-                </div>
+                <motion.h2
+                    className="left-rango-text"
+                    variants={fadeUp}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                >
+                    <span>in</span>
+                </motion.h2>
 
-                {/* Mouse Scroll */}
-                <img src={mouse} alt="Scroll" className="mouse-cola" data-aos="fade-up" data-aos-delay="600" />
-            </section>
-        </>
+                <motion.h2
+                    className="bottom-rango-text"
+                    variants={fadeRight}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                >
+                    <span>
+                        Every <br /> Sip!
+                    </span>
+                </motion.h2>
+            </div>
+
+            {/* === BOTTLE & ELEMENTS === */}
+            <motion.div
+                className="bottle-rango-wrap"
+                variants={fadeBottle}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+            >
+                <img src={bottle} alt="Rango Bottle" className="bottle-rango" />
+
+                {/* 🍊 orange2 → fade in */}
+                <motion.img
+                    src={orange2}
+                    alt="Orange-2"
+                    className="orange-2"
+                    variants={fadeIn}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                />
+
+                {/* 🍊 orange1 → from right */}
+                <motion.img
+                    src={ice1}
+                    alt="ice-1"
+                    className="ice-1"
+                    variants={fromRight}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                />
+
+                {/* 🍃 leaf1 → from left */}
+                <motion.img
+                    src={leaf1}
+                    alt="Leaf-1"
+                    className="leaf-1"
+                    variants={fromLeft}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                />
+
+                {/* 🍃 leaf2 → from right */}
+                <motion.img
+                    src={ice2}
+                    alt="ice-2"
+                    className="ice-2"
+                    variants={fromRight}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                />
+            </motion.div>
+
+            {/* === MOUSE ICON === */}
+            <motion.img
+                src={mouse}
+                alt="Scroll"
+                className="mouse-rango"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+            />
+        </section>
     );
 };
 
