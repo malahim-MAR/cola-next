@@ -11,7 +11,7 @@ import mouse from "../../assets/mouse.png";
 const Slide2 = () => {
     // === TEXT VARIANTS ===
     const fadeUp = {
-        hidden: { y: -100, opacity: 0 },
+        hidden: { y: -200, opacity: 0 },
         visible: {
             y: 0,
             opacity: 1,

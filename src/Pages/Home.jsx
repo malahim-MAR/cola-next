@@ -45,6 +45,7 @@ export default function Home() {
             <Slide8 />
           </section>
         </div>
+        <Footer />
       </div>
     </>
   );

@@ -1,53 +1,66 @@
-.hero-cola {
-    /* position: relative; */
+.hero-storm {
     height: 100vh;
-    /* width: 100%; */
-    background: #d60000 url("../../assets/ColaBg.png") center center / cover no-repeat;
+    background: #d60000 url("../../assets/StormBg.png") center center / cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     padding: 0 15px;
+    position: relative;
 }
 
 /* Text */
-.hero-cola-text {
+.hero-storm-text {
     position: absolute;
     color: #fff;
     text-align: center;
     z-index: 2;
 }
 
-.hero-cola-text h1 {
+.hero-storm-heading {
     margin: 0;
     font-weight: 700;
     font-size: 160px;
     line-height: 1;
+
 }
 
-.hero-cola-text h1 span {
+.storm-left {
+    color: #fff;
+    position: relative;
+    font-size: 48px;
+    top: -65px;
+    left: -110px;
+    letter-spacing: -6px;
+    display: inline-block;
+}
+
+.next-right {
     color: #ffef9f;
+    display: inline-block;
 }
 
-.top-cola-text {
+.top-storm-text {
     position: absolute;
-    left: 100px;
-    top: -40px;
+    left: -300px;
+    top: -105px;
+    margin: 0;
+    letter-spacing: -6px;
+    font-weight: 700;
+    font-size: 128px;
+}
+
+.mid-storm-text {
+    position: absolute;
+    left: -390%;
+    bottom: -30px;
+    letter-spacing: -6px;
     margin: 0;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 128px;
 }
 
-.mid-cola-text {
-    position: absolute;
-    left: 30%;
-    bottom: -40px;
-    margin: 0;
-    font-weight: 700;
-    font-size: 48px;
-}
-
-.bottom-cola-text {
+.bottom-storm-text {
     position: absolute;
     right: -150px;
     bottom: -80px;
@@ -56,160 +69,162 @@
     font-size: 96px;
 }
 
+.right-top-storm-text {
+    position: absolute;
+    left: 90px;
+    top: 50px;
+    letter-spacing: -6px;
+
+    margin: 0;
+    font-weight: 700;
+    font-size: 128px;
+}
+
+.right-mid-storm-text {
+    position: absolute;
+    left: 210px;
+    top: 175px;
+    letter-spacing: -6%;
+    margin: 0;
+    font-weight: 700;
+    font-size: 48px;
+}
+
+.right-bottom-storm-text {
+    position: absolute;
+    left: 120px;
+    bottom: -170px;
+    letter-spacing: -6px;
+    margin: 0;
+    font-weight: 700;
+    font-size: 128px;
+}
+
 /* Bottle */
-.bottle-cola-wrap {
+.bottle-storm-wrap {
     position: relative;
     z-index: 3;
     margin-top: 100px;
 }
 
-.bottle-cola {
-    width: 130px;
+.bottle-storm {
+    width: 150px;
     height: auto;
 }
 
 /* Ice */
-.ice-cola {
+.ice-storm {
     position: absolute;
     width: 150px;
     opacity: 0.9;
-    animation: floatIceCola 4s ease-in-out infinite;
 }
 
-.ice-cola-top {
+.ice-storm-top {
     top: 0px;
     right: -150px;
 }
 
-.ice-cola-bottom {
+.ice-storm-bottom {
     bottom: 50px;
     left: -200px;
 }
 
-@keyframes floatIceCola {
-    0% {
-        transform: translateY(0) rotate(0deg);
-    }
-
-    50% {
-        transform: translateY(-10px) rotate(5deg);
-    }
-
-    100% {
-        transform: translateY(0) rotate(0deg);
-    }
-}
-
 /* Mouse Scroll */
-.mouse-cola {
+.mouse-storm {
     position: absolute;
     bottom: 20px;
     width: 35px;
-    animation: mouseColaAnim 1.5s infinite ease-in-out;
+    opacity: 0.8;
 }
 
-@keyframes mouseColaAnim {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(10px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
-
-/* ========== Responsive ========== */
+/* Responsive */
 @media (max-width: 1024px) {
-    .hero-cola-text h1 {
+    .hero-storm-heading {
         font-size: 110px;
     }
 
-    .top-cola-text {
+    .top-storm-text {
         font-size: 36px;
         left: -80px;
     }
 
-    .mid-cola-text {
+    .mid-storm-text {
         font-size: 36px;
         left: 30%;
     }
 
-    .bottom-cola-text {
+    .bottom-storm-text {
         font-size: 64px;
         right: -100px;
     }
 
-    .bottle-cola {
+    .bottle-storm {
         width: 110px;
     }
 
-    .ice-cola {
+    .ice-storm {
         width: 90px;
     }
 }
 
 @media (max-width: 768px) {
-    .hero-cola-text h1 {
+    .hero-storm-heading {
         font-size: 70px;
     }
 
-    .top-cola-text {
+    .top-storm-text {
         font-size: 28px;
         left: -50px;
     }
 
-    .mid-cola-text {
+    .mid-storm-text {
         font-size: 28px;
         left: 25%;
     }
 
-    .bottom-cola-text {
+    .bottom-storm-text {
         font-size: 42px;
         right: -50px;
     }
 
-    .bottle-cola {
+    .bottle-storm {
         width: 90px;
     }
 
-    .ice-cola {
+    .ice-storm {
         width: 70px;
     }
 }
 
 @media (max-width: 480px) {
-    .hero-cola-text h1 {
+    .hero-storm-heading {
         font-size: 48px;
     }
 
-    .top-cola-text {
+    .top-storm-text {
         font-size: 20px;
         left: -30px;
     }
 
-    .mid-cola-text {
+    .mid-storm-text {
         font-size: 20px;
         left: 22%;
     }
 
-    .bottom-cola-text {
+    .bottom-storm-text {
         font-size: 28px;
         right: -30px;
     }
 
-    .bottle-cola {
+    .bottle-storm {
         width: 70px;
     }
 
-    .ice-cola {
+    .ice-storm {
         width: 50px;
     }
 
-    .mouse-cola {
+    .mouse-storm {
         width: 25px;
     }
 }

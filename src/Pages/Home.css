@@ -10,6 +10,16 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Hide scrollbar for entire page */
+::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+html {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
 .home {
   position: relative;
   width: 100%;
@@ -34,6 +44,14 @@ nav.navbar {
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   -webkit-overflow-scrolling: touch;
+
+  /* Hide scrollbar only for scrollable wrapper */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.snap-wrapper::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
 }
 
 /* Every Section */
@@ -41,8 +59,5 @@ nav.navbar {
   scroll-snap-align: start;
   height: 100vh;
   width: 100%;
-}
-
-.snap-section {
   overflow: visible !important;
 }

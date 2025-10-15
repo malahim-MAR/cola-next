@@ -14,33 +14,33 @@ const Slide1 = () => {
     };
 
 
- const slideLeft = {
-  hidden: { x: -500, opacity: 0 },
-  visible: {
-    x: [-500, -480, 0], // slight start movement, pause, then complete
-    opacity: [0, 0.8, 1],
-    transition: {
-      duration: 2,
-      ease: [0.25, 1, 0.5, 1],
-      times: [0, 0.15, 1], // pause near start
-      delay: 0.1,
-    },
-  },
-};
+    const slideLeft = {
+        hidden: { x: -500, opacity: 0 },
+        visible: {
+            x: [-500, -480, 0], // slight start movement, pause, then complete
+            opacity: [0, 0.8, 1],
+            transition: {
+                duration: 2,
+                ease: [0.25, 1, 0.5, 1],
+                times: [0, 0.15, 1], // pause near start
+                delay: 0.1,
+            },
+        },
+    };
 
-const slideRight = {
-  hidden: { x: 500, opacity: 0 },
-  visible: {
-    x: [500, 480, 0], // same for right side
-    opacity: [0, 0.8, 1],
-    transition: {
-      duration: 2,
-      ease: [0.25, 1, 0.5, 1],
-      times: [0, 0.15, 1],
-      delay: 0.1,
-    },
-  },
-};
+    const slideRight = {
+        hidden: { x: 500, opacity: 0 },
+        visible: {
+            x: [500, 480, 0], // same for right side
+            opacity: [0, 0.8, 1],
+            transition: {
+                duration: 2,
+                ease: [0.25, 1, 0.5, 1],
+                times: [0, 0.15, 1],
+                delay: 0.1,
+            },
+        },
+    };
 
 
 
