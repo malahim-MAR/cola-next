@@ -1,37 +1,28 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./Slide1.css";
+
 import bottle from "../../assets/cola-bottle.png";
+import bottleshadow from "../../assets/bottle-shadows/cola.png";
 import ice1 from "../../assets/ice1.png";
 import ice2 from "../../assets/ice2.png";
 import mouse from "../../assets/mouse.png";
 
 const Slide1 = () => {
-    // Variants for smooth animation flow
+    // === VARIANTS ===
     const fadeZoom = {
         hidden: { opacity: 0, scale: 0.9 },
-        visible: { opacity: 1, scale: 1, transition: { duration: 1.5, ease: "easeOut" } },
+        visible: {
+            opacity: 1,
+            scale: 1,
+            transition: { duration: 1.5, ease: "easeOut" },
+        },
     };
-
 
     const slideLeft = {
         hidden: { x: -500, opacity: 0 },
         visible: {
-            x: [-500, -480, 0], // slight start movement, pause, then complete
-            opacity: [0, 0.8, 1],
-            transition: {
-                duration: 2,
-                ease: [0.25, 1, 0.5, 1],
-                times: [0, 0.15, 1], // pause near start
-                delay: 0.1,
-            },
-        },
-    };
-
-    const slideRight = {
-        hidden: { x: 500, opacity: 0 },
-        visible: {
-            x: [500, 480, 0], // same for right side
+            x: [-500, -480, 0],
             opacity: [0, 0.8, 1],
             transition: {
                 duration: 2,
@@ -42,20 +33,30 @@ const Slide1 = () => {
         },
     };
 
-
-
-
+    const slideRight = {
+        hidden: { x: 500, opacity: 0 },
+        visible: {
+            x: [500, 480, 0],
+            opacity: [0, 0.8, 1],
+            transition: {
+                duration: 2,
+                ease: [0.25, 1, 0.5, 1],
+                times: [0, 0.15, 1],
+                delay: 0.1,
+            },
+        },
+    };
 
     return (
         <section className="hero-cola">
-            {/* Text */}
+            {/* ====== TEXT SECTION ====== */}
             <div className="hero-cola-text">
                 <motion.h2
                     className="top-cola-text"
                     variants={fadeZoom}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true }}
+                    viewport={{ once: false, amount: 0.6 }}
                 >
                     Kyun ke
                 </motion.h2>
@@ -66,7 +67,7 @@ const Slide1 = () => {
                         variants={slideLeft}
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{ once: true }}
+                        viewport={{ once: false, amount: 0.6 }}
                     >
                         Cola
                     </motion.span>
@@ -76,7 +77,7 @@ const Slide1 = () => {
                         variants={slideRight}
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{ once: true }}
+                        viewport={{ once: false, amount: 0.6 }}
                     >
                         Next
                     </motion.span>
@@ -87,7 +88,7 @@ const Slide1 = () => {
                     variants={fadeZoom}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true }}
+                    viewport={{ once: false, amount: 0.6 }}
                 >
                     Hai
                 </motion.h6>
@@ -97,38 +98,40 @@ const Slide1 = () => {
                     variants={fadeZoom}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true }}
+                    viewport={{ once: false, amount: 0.6 }}
                 >
                     Pakistani!
                 </motion.h2>
             </div>
 
-            {/* Bottle + Ice */}
+            {/* ====== BOTTLE + ICE ====== */}
             <motion.div
                 className="bottle-cola-wrap"
                 variants={fadeZoom}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true }}
+                viewport={{ once: false, amount: 0.6 }}
             >
                 <img src={bottle} alt="Cola Bottle" className="bottle-cola" />
+                <img src={bottleshadow} alt="Bottle shadow" className="bottle-shadow" />
+
                 <motion.img
                     src={ice1}
-                    alt=""
+                    alt="ice cube top"
                     className="ice-cola ice-cola-top"
                     animate={{ y: [0, -10, 0] }}
                     transition={{ duration: 4, ease: "easeInOut", repeat: Infinity }}
                 />
                 <motion.img
                     src={ice2}
-                    alt=""
+                    alt="ice cube bottom"
                     className="ice-cola ice-cola-bottom"
                     animate={{ y: [0, 10, 0] }}
                     transition={{ duration: 4, ease: "easeInOut", repeat: Infinity }}
                 />
             </motion.div>
 
-            {/* Mouse Scroll */}
+            {/* ====== SCROLL INDICATOR ====== */}
             <motion.img
                 src={mouse}
                 alt="Scroll Indicator"

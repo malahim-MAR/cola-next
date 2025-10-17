@@ -2,10 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import "./Slide3.css";
 import bottle from "../../assets/RangoBottle.png";
+import bottleshadow from "../../assets/bottle-shadows/rango.png";
 import ice1 from "../../assets/ice2.png";
 import ice2 from "../../assets/ice1.png";
 import orange2 from "../../assets/orangeSlice.png";
-import leaf1 from "../../assets/leaf1.png";
+import leaf1 from "../../assets/orangeleaf.png";
 import mouse from "../../assets/mouse.png";
 
 const Slide3 = () => {
@@ -82,7 +83,7 @@ const Slide3 = () => {
                     variants={fadeDown}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true }}
+                     viewport={{ once: false, amount: 0.6 }}
                 >
                     <span>Zesty Sunshine</span>
                 </motion.h2>
@@ -92,7 +93,7 @@ const Slide3 = () => {
                     variants={fadeUp}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true }}
+                     viewport={{ once: false, amount: 0.6 }}
                 >
                     <span>in</span>
                 </motion.h2>
@@ -102,7 +103,7 @@ const Slide3 = () => {
                     variants={fadeRight}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true }}
+                     viewport={{ once: false, amount: 0.6 }}
                 >
                     <span>
                         Every <br /> Sip!
@@ -116,52 +117,59 @@ const Slide3 = () => {
                 variants={fadeBottle}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true }}
+                 viewport={{ once: false, amount: 0.6 }}
             >
                 <img src={bottle} alt="Rango Bottle" className="bottle-rango" />
+                <img src={bottleshadow} alt="Bottle shadow" className="bottle-shadow" />
 
-                {/* 🍊 orange2 → fade in */}
+                {/* 🍊 orange slice */}
                 <motion.img
                     src={orange2}
-                    alt="Orange-2"
+                    alt="Orange Slice"
                     className="orange-2"
                     variants={fadeIn}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true }}
+                     viewport={{ once: false, amount: 0.6 }}
                 />
 
-                {/* 🍊 orange1 → from right */}
+                {/* ❄️ Ice 1 */}
                 <motion.img
                     src={ice1}
-                    alt="ice-1"
+                    alt="Ice 1"
                     className="ice-1"
                     variants={fromRight}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true }}
+                     viewport={{ once: false, amount: 0.6 }}
+                    animate={{ y: [0, -10, 0] }}
+                    transition={{ duration: 4, ease: "easeInOut", repeat: Infinity }}
                 />
 
-                {/* 🍃 leaf1 → from left */}
+                {/* 🍃 Leaf */}
                 <motion.img
                     src={leaf1}
-                    alt="Leaf-1"
-                    className="leaf-1"
+                    alt="Orange Leaf"
+                    className="orange-leaf-1"
                     variants={fromLeft}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true }}
+                     viewport={{ once: false, amount: 0.6 }}
+                    animate={{ y: [0, 10, 0] }}
+                    transition={{ duration: 4, ease: "easeInOut", repeat: Infinity }}
                 />
 
-                {/* 🍃 leaf2 → from right */}
+                {/* ❄️ Ice 2 */}
                 <motion.img
                     src={ice2}
-                    alt="ice-2"
+                    alt="Ice 2"
                     className="ice-2"
                     variants={fromRight}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true }}
+                     viewport={{ once: false, amount: 0.6 }}
+                    animate={{ y: [0, -10, 0] }}
+                    transition={{ duration: 4, ease: "easeInOut", repeat: Infinity }}
                 />
             </motion.div>
 
@@ -173,7 +181,7 @@ const Slide3 = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
+                 viewport={{ once: false, amount: 0.6 }}
             />
         </section>
     );

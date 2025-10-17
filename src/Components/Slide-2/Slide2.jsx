@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import "./Slide2.css";
 import bottle from "../../assets/LemonBottle.png";
+import bottleshadow from "../../assets/bottle-shadows/fizup.png";
 import lemon2 from "../../assets/lemon2.png";
 import lemon1 from "../../assets/lemon1.png";
 import leaf1 from "../../assets/leaf1.png";
@@ -82,7 +83,7 @@ const Slide2 = () => {
                     variants={fadeDown}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true }}
+                     viewport={{ once: false, amount: 0.6 }}
                 >
                     <span>Lemon Lime</span>
                 </motion.h2>
@@ -92,7 +93,7 @@ const Slide2 = () => {
                     variants={fadeUp}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true }}
+                     viewport={{ once: false, amount: 0.6 }}
                 >
                     <span>Lift</span>
                 </motion.h2>
@@ -102,7 +103,7 @@ const Slide2 = () => {
                     variants={fadeDown}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true }}
+                     viewport={{ once: false, amount: 0.6 }}
                 >
                     <span>With</span>
                 </motion.h2>
@@ -112,7 +113,7 @@ const Slide2 = () => {
                     variants={fadeRight}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true }}
+                     viewport={{ once: false, amount: 0.6 }}
                 >
                     <span>
                         Every <br /> &nbsp;&nbsp; Chill!
@@ -126,9 +127,10 @@ const Slide2 = () => {
                 variants={fadeBottle}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true }}
+                 viewport={{ once: false, amount: 0.6 }}
             >
                 <img src={bottle} alt="Lemon Bottle" className="bottle-lemon" />
+                <img src={bottleshadow} alt="Bottle shadow" className="bottle-shadow" />
 
                 {/* 🍋 lemon2 → fade in */}
                 <motion.img
@@ -138,7 +140,7 @@ const Slide2 = () => {
                     variants={fadeIn}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true }}
+                     viewport={{ once: false, amount: 0.6 }}
                 />
 
                 {/* 🍋 lemon1 → from right */}
@@ -149,7 +151,9 @@ const Slide2 = () => {
                     variants={fromRight}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true }}
+                     viewport={{ once: false, amount: 0.6 }}
+                    animate={{ y: [0, -10, 0] }}
+                    transition={{ duration: 4, ease: "easeInOut", repeat: Infinity }}
                 />
 
                 {/* 🍃 leaf1 → from left */}
@@ -160,7 +164,9 @@ const Slide2 = () => {
                     variants={fromLeft}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true }}
+                     viewport={{ once: false, amount: 0.6 }}
+                    animate={{ y: [0, -10, 0] }}
+                    transition={{ duration: 4, ease: "easeInOut", repeat: Infinity }}
                 />
 
                 {/* 🍃 leaf2 → from right */}
@@ -171,7 +177,9 @@ const Slide2 = () => {
                     variants={fromRight}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true }}
+                     viewport={{ once: false, amount: 0.6 }}
+                    animate={{ y: [0, 10, 0] }}
+                    transition={{ duration: 4, ease: "easeInOut", repeat: Infinity }}
                 />
             </motion.div>
 
@@ -183,7 +191,7 @@ const Slide2 = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
+                 viewport={{ once: false, amount: 0.6 }}
             />
         </section>
     );

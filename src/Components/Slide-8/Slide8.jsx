@@ -2,6 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import "./Slide8.css";
 import bottle from "../../assets/lyche-bottle.png";
+import lycheefruit from "../../assets/lychee-fruit.png";
+import bottleshadow from "../../assets/bottle-shadows/leach.png";
 import ice1 from "../../assets/lychee1.png";
 import ice2 from "../../assets/lychee2.png";
 import mouse from "../../assets/mouse.png";
@@ -24,6 +26,20 @@ const Slide8 = () => {
                 ease: [0.25, 1, 0.5, 1],
                 times: [0, 0.15, 1], // pause near start
                 delay: 0.1,
+            },
+        },
+    };
+    // 👇 Add this variant after slideRight
+    const slideTop = {
+        hidden: { y: -200, opacity: 0 },
+        visible: {
+            y: [-200, -50, 0],
+            opacity: [0, 0.7, 1],
+            transition: {
+                duration: 2,
+                ease: [0.25, 1, 0.5, 1],
+                times: [0, 0.25, 1],
+                delay: 0.2,
             },
         },
     };
@@ -52,18 +68,23 @@ const Slide8 = () => {
             <div className="hero-lychee-text">
                 <motion.h2
                     className="top-lychee-text"
-                    variants={slideLeft}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true }}
+                    viewport={{ once: false, amount: 0.6 }}
                 >
-                    <span>
+                    <motion.span
+                        variants={slideLeft} // “Exotic” still from left
+                    >
                         Exotic
-                    </span>
-                    <span>
+                    </motion.span>
+
+                    <motion.span
+                        variants={slideTop} // 👈 this comes from top now
+                    >
                         Sweetness,
-                    </span>
+                    </motion.span>
                 </motion.h2>
+
 
                 <h1 className="hero-lychee-heading">
                     <motion.span
@@ -71,7 +92,7 @@ const Slide8 = () => {
                         variants={slideLeft}
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{ once: true }}
+                        viewport={{ once: false, amount: 0.6 }}
                     >
                         to
                     </motion.span>
@@ -82,9 +103,9 @@ const Slide8 = () => {
                     variants={slideLeft}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true }}
+                    viewport={{ once: false, amount: 0.6 }}
                 >
-                     Chilled
+                    Chilled
                 </motion.h6>
                 {/* Right Side */}
                 <motion.h2
@@ -92,7 +113,7 @@ const Slide8 = () => {
                     variants={slideRight}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true }}
+                    viewport={{ once: false, amount: 0.3 }}
                 >
                     Perfection.
                 </motion.h2>
@@ -101,7 +122,7 @@ const Slide8 = () => {
                     variants={slideRight}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true }}
+                     viewport={{ once: false, amount: 0.6 }}
                 >
                     Your
                 </motion.h2>
@@ -110,7 +131,7 @@ const Slide8 = () => {
                     variants={slideRight}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true }}
+                     viewport={{ once: false, amount: 0.6 }}
                 >
                     Day!
                 </motion.h2> */}
@@ -122,10 +143,12 @@ const Slide8 = () => {
                 variants={fadeZoom}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true }}
+                viewport={{ once: false, amount: 0.6 }}
             >
                 <img src={bottle} alt="lychee Bottle" className="bottle-lychee" />
-                <img src={bottle} alt="lychee Bottle" className="bottle-lychee-piece" />
+                <img src={lycheefruit} alt="lychee Bottle" className="bottle-lychee-piece" />
+                <img src={bottleshadow} alt="anaar Bottle shadow" className="bottle-shadow" />
+
                 <motion.img
                     src={ice1}
                     alt=""

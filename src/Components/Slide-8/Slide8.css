@@ -113,6 +113,22 @@
     height: auto;
 }
 
+.bottle-lychee-piece {
+    position: absolute;
+    z-index: 4;
+    width: 256px;
+    left: -70px;
+    bottom: -70px;
+}
+.bottle-shadow {
+    position: absolute;
+    width: 310px;
+    bottom: -40px;
+    left: -80px;
+    z-index: -1;
+}
+
+
 /* Ice */
 .ice-lychee {
     position: absolute;

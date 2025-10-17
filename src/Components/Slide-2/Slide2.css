@@ -183,12 +183,12 @@
     /* animation: floatIceLemon 4s ease-in-out infinite; */
 }
 
-.leaf-1 {
+.orange-leaf-1 {
     position: absolute;
-    width: 137px;
-    height: 161px;
-    top: 120px;
-    left: -280px;
+    width: 117px;
+    /* height: 161px; */
+    top: 60px;
+    left: -260px;
     /* animation: floatIceLemon 4s ease-in-out infinite; */
 }
 

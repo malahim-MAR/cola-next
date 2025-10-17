@@ -53,10 +53,10 @@
 /* 🍊 Oranges & 🍃 Leaves */
 .orange-2 {
     position: absolute;
-    width: 300px;
-    height: 220px;
+    width: 340px;
+    /* height: 220px; */
     bottom: -30px;
-    right: -80px;
+    right: -100px;
 }
 
 .ice-1 {

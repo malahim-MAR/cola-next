@@ -55,10 +55,10 @@ const Slide6 = () => {
             <div className="hero-anaar-text">
                 <motion.h2
                     className="top-anaar-text"
-                    variants={slideLeft}
+                    variants={fadeZoom}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true }}
+                     viewport={{ once: false, amount: 0.6 }}
                 >
                     <span>
                         Bold,
@@ -74,7 +74,7 @@ const Slide6 = () => {
                         variants={slideLeft}
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{ once: true }}
+                         viewport={{ once: false, amount: 0.6 }}
                     >
                         and
                     </motion.span>
@@ -85,7 +85,7 @@ const Slide6 = () => {
                     variants={slideLeft}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true }}
+                     viewport={{ once: false, amount: 0.6 }}
                 >
                     fire
                 </motion.h6> */}
@@ -95,7 +95,7 @@ const Slide6 = () => {
                     variants={slideRight}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true }}
+                     viewport={{ once: false, amount: 0.6 }}
                 >
                     Bursting
                 </motion.h2>
@@ -104,7 +104,7 @@ const Slide6 = () => {
                     variants={slideRight}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true }}
+                     viewport={{ once: false, amount: 0.6 }}
                 >
                     With
                 </motion.h2>
@@ -113,7 +113,7 @@ const Slide6 = () => {
                     variants={slideRight}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true }}
+                     viewport={{ once: false, amount: 0.6 }}
                 >
                     Power
                 </motion.h2>
@@ -125,7 +125,7 @@ const Slide6 = () => {
                 variants={fadeZoom}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true }}
+                 viewport={{ once: false, amount: 0.6 }}
             >
                 <img src={bottle} alt="anaar Bottle" className="bottle-anaar" />
                 <img src={anaarpiece} alt="anaarpiece" className="bottle-anaar-piece" />

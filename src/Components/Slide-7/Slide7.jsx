@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import "./Slide7.css";
 import bottle from "../../assets/GreenSoda-bottle.png";
+import bottleshadow from "../../assets/bottle-shadows/greensoda.png";
 import ice1 from "../../assets/ice1.png";
 import ice2 from "../../assets/ice2.png";
 import mouse from "../../assets/mouse.png";
@@ -55,7 +56,7 @@ const Slide7 = () => {
                     variants={slideLeft}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true }}
+                     viewport={{ once: false, amount: 0.6 }}
                 >
                     Green
                 </motion.h2>
@@ -65,7 +66,7 @@ const Slide7 = () => {
                     variants={slideLeft}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true }}
+                     viewport={{ once: false, amount: 0.6 }}
                 >
                     Wild
                 </motion.span>
@@ -75,7 +76,7 @@ const Slide7 = () => {
                     variants={slideLeft}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true }}
+                     viewport={{ once: false, amount: 0.6 }}
                 >
                     Zero
                 </motion.h6>
@@ -85,7 +86,7 @@ const Slide7 = () => {
                     variants={slideRight}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true }}
+                     viewport={{ once: false, amount: 0.6 }}
                 >
                     Fizz.
                 </motion.h2>
@@ -94,7 +95,7 @@ const Slide7 = () => {
                     variants={slideRight}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true }}
+                     viewport={{ once: false, amount: 0.6 }}
                 >
                     Taste.
                 </motion.h2>
@@ -103,7 +104,7 @@ const Slide7 = () => {
                     variants={slideRight}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true }}
+                     viewport={{ once: false, amount: 0.6 }}
                 >
                     Rules
                 </motion.h2>
@@ -115,9 +116,11 @@ const Slide7 = () => {
                 variants={fadeZoom}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true }}
+                 viewport={{ once: false, amount: 0.6 }}
             >
                 <img src={bottle} alt="soda Bottle" className="bottle-soda" />
+                <img src={bottleshadow} alt="Bottle shadow" className="bottle-shadow" />
+
                 <motion.img
                     src={ice1}
                     alt=""
