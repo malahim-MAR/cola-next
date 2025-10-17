@@ -14,39 +14,26 @@ import Footer from "../Components/Footer/Footer";
 export default function Home() {
   return (
     <>
-
       <div className="home">
         {/* Fixed Navbar */}
         <Navbar />
 
         {/* Snap Scroll Wrapper */}
         <div className="snap-wrapper">
-          <section className="snap-section">
-            <Slide1 />
-          </section>
-          <section className="snap-section">
-            <Slide2 />
-          </section>
-          <section className="snap-section">
-            <Slide3 />
-          </section>
-          <section className="snap-section">
-            <Slide4 />
-          </section>
-          <section className="snap-section">
-            <Slide5 />
-          </section>
-          <section className="snap-section">
-            <Slide6 />
-          </section>
-          <section className="snap-section">
-            <Slide7 />
-          </section>
-          <section className="snap-section">
-            <Slide8 />
-          </section>
+          <section className="snap-section"><Slide1 /></section>
+          <section className="snap-section"><Slide2 /></section>
+          <section className="snap-section"><Slide3 /></section>
+          <section className="snap-section"><Slide4 /></section>
+          <section className="snap-section"><Slide5 /></section>
+          <section className="snap-section"><Slide6 /></section>
+          <section className="snap-section"><Slide7 /></section>
+          <section className="snap-section"><Slide8 /></section>
+
+          {/* Footer Section (non-snap) */}
+          <div className="footer-section">
+            <Footer />
+          </div>
         </div>
-        <Footer />
       </div>
     </>
   );
