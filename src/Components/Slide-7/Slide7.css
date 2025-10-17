@@ -25,35 +25,38 @@
 
 }
 
-.soda-left {
-    color: #fff;
-    position: relative;
-    font-size: 48px;
-    top: -65px;
-    left: -110px;
-    letter-spacing: -6px;
-    display: inline-block;
-}
-
-.next-right {
-    color: #ffef9f;
-    display: inline-block;
-}
-
 .top-soda-text {
     position: absolute;
-    left: -300px;
-    top: -105px;
+    left: -420px;
+    top: -200px;
     margin: 0;
     letter-spacing: -6px;
     font-weight: 700;
     font-size: 128px;
 }
 
+.soda-left {
+    color: #fff;
+    position: absolute;
+    font-size: 128px;
+    top: -80px;
+    left: -333px;
+    font-weight: 700;
+    letter-spacing: -6px;
+    display: inline-block;
+}
+
+/* .next-right {
+    color: #ffef9f;
+    display: inline-block;
+} */
+
+
+
 .mid-soda-text {
     position: absolute;
-    left: -390%;
-    bottom: -30px;
+    left: -340px;
+    top: 35px;
     letter-spacing: -6px;
     margin: 0;
     font-weight: 700;
@@ -71,10 +74,9 @@
 
 .right-top-soda-text {
     position: absolute;
-    left: 90px;
-    top: 50px;
+    left: 62px;
+    top: -190px;
     letter-spacing: -6px;
-
     margin: 0;
     font-weight: 700;
     font-size: 128px;
@@ -82,18 +84,18 @@
 
 .right-mid-soda-text {
     position: absolute;
-    left: 210px;
-    top: 175px;
+    left: 40px;
+    top: -70px;
     letter-spacing: -6%;
     margin: 0;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 128px;
 }
 
 .right-bottom-soda-text {
     position: absolute;
-    left: 120px;
-    bottom: -170px;
+    left: 65px;
+    top: 40px;
     letter-spacing: -6px;
     margin: 0;
     font-weight: 700;
@@ -115,18 +117,21 @@
 /* Ice */
 .ice-soda {
     position: absolute;
-    width: 150px;
     opacity: 0.9;
 }
 
 .ice-soda-top {
     top: 0px;
-    right: -150px;
+    right: -280px;
+    width: 150px;
+
 }
 
 .ice-soda-bottom {
     bottom: 50px;
-    left: -200px;
+    left: -190px;
+    width: 200px;
+
 }
 
 /* Mouse Scroll */

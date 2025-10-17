@@ -9,6 +9,7 @@ import Slide5 from "../Components/Slide-5/Slide5";
 import Slide6 from "../Components/Slide-6/Slide6";
 import Slide7 from "../Components/Slide-7/Slide7";
 import Slide8 from "../Components/Slide-8/Slide8";
+import Footer from "../Components/Footer/Footer";
 
 export default function Home() {
   return (

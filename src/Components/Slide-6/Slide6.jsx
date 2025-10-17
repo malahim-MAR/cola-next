@@ -2,8 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import "./Slide6.css";
 import bottle from "../../assets/annar-bottle.png";
-import ice1 from "../../assets/ice1.png";
-import ice2 from "../../assets/ice2.png";
+import anaarpiece from "../../assets/anaarpiece.png";
+import bottleshadow from "../../assets/bottle-shadows/anaar.png";
+import AnnarPiece1 from "../../assets/AnnarPiece1.png";
+import AnnarPiece2 from "../../assets/AnnarPiece2.png";
+import AnnarPiece3 from "../../assets/AnnarPiece3.png";
 import mouse from "../../assets/mouse.png";
 
 const Slide6 = () => {
@@ -57,7 +60,12 @@ const Slide6 = () => {
                     whileInView="visible"
                     viewport={{ once: true }}
                 >
-                    Ignite
+                    <span>
+                        Bold,
+                    </span>
+                    <span>
+                        Sweet,
+                    </span>
                 </motion.h2>
 
                 <h1 className="hero-anaar-heading">
@@ -68,11 +76,11 @@ const Slide6 = () => {
                         whileInView="visible"
                         viewport={{ once: true }}
                     >
-                        the
+                        and
                     </motion.span>
                 </h1>
 
-                <motion.h6
+                {/* <motion.h6
                     className="mid-anaar-text"
                     variants={slideLeft}
                     initial="hidden"
@@ -80,7 +88,7 @@ const Slide6 = () => {
                     viewport={{ once: true }}
                 >
                     fire
-                </motion.h6>
+                </motion.h6> */}
                 {/* Right Side */}
                 <motion.h2
                     className="right-top-anaar-text"
@@ -89,7 +97,7 @@ const Slide6 = () => {
                     whileInView="visible"
                     viewport={{ once: true }}
                 >
-                    Rule
+                    Bursting
                 </motion.h2>
                 <motion.h2
                     className="right-mid-anaar-text"
@@ -98,7 +106,7 @@ const Slide6 = () => {
                     whileInView="visible"
                     viewport={{ once: true }}
                 >
-                    Your
+                    With
                 </motion.h2>
                 <motion.h2
                     className="right-bottom-anaar-text"
@@ -107,7 +115,7 @@ const Slide6 = () => {
                     whileInView="visible"
                     viewport={{ once: true }}
                 >
-                    Day!
+                    Power
                 </motion.h2>
             </div>
 
@@ -120,21 +128,31 @@ const Slide6 = () => {
                 viewport={{ once: true }}
             >
                 <img src={bottle} alt="anaar Bottle" className="bottle-anaar" />
+                <img src={anaarpiece} alt="anaarpiece" className="bottle-anaar-piece" />
+                <img src={bottleshadow} alt="anaar Bottle shadow" className="bottle-anaar-shadow" />
                 <motion.img
-                    src={ice1}
+                    src={AnnarPiece2}
                     alt=""
                     className="ice-anaar ice-anaar-top"
                     animate={{ y: [0, -10, 0] }}
                     transition={{ duration: 4, ease: "easeInOut", repeat: Infinity }}
                 />
                 <motion.img
-                    src={ice2}
+                    src={AnnarPiece1}
                     alt=""
                     className="ice-anaar ice-anaar-bottom"
                     animate={{ y: [0, 10, 0] }}
                     transition={{ duration: 4, ease: "easeInOut", repeat: Infinity }}
                 />
+                <motion.img
+                    src={AnnarPiece3}
+                    alt=""
+                    className="ice-anaar ice-anaar-mid"
+                    animate={{ y: [0, 10, 0] }}
+                    transition={{ duration: 4, ease: "easeInOut", repeat: Infinity }}
+                />
             </motion.div>
+
 
             {/* Mouse Scroll */}
             <motion.img

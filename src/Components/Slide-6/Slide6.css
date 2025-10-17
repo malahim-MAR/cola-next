@@ -31,7 +31,7 @@
     font-size: 48px;
     top: -65px;
     left: -110px;
-    letter-spacing: -6px;
+    letter-spacing: -10%;
     display: inline-block;
 }
 
@@ -42,12 +42,14 @@
 
 .top-anaar-text {
     position: absolute;
-    left: -300px;
-    top: -105px;
+    left: -280px;
+    top: -130px;
     margin: 0;
     letter-spacing: -6px;
     font-weight: 700;
     font-size: 128px;
+    display: flex;
+    gap: 30px;
 }
 
 .mid-anaar-text {
@@ -71,10 +73,9 @@
 
 .right-top-anaar-text {
     position: absolute;
-    left: 90px;
-    top: 50px;
+    left: 110px;
+    top: 0px;
     letter-spacing: -6px;
-
     margin: 0;
     font-weight: 700;
     font-size: 128px;
@@ -82,8 +83,8 @@
 
 .right-mid-anaar-text {
     position: absolute;
-    left: 210px;
-    top: 175px;
+    left: 300px;
+    top: 125px;
     letter-spacing: -6%;
     margin: 0;
     font-weight: 700;
@@ -92,8 +93,8 @@
 
 .right-bottom-anaar-text {
     position: absolute;
-    left: 120px;
-    bottom: -170px;
+    left: 180px;
+    bottom: -120px;
     letter-spacing: -6px;
     margin: 0;
     font-weight: 700;
@@ -108,25 +109,47 @@
 }
 
 .bottle-anaar {
-    width: 150px;
+    width: 140px;
     height: auto;
 }
 
-/* Ice */
 .ice-anaar {
     position: absolute;
-    width: 150px;
+    width: 90px;
     opacity: 0.9;
 }
 
-.ice-anaar-top {
-    top: 0px;
-    right: -150px;
+/* Ice */
+.bottle-anaar-piece {
+    position: absolute;
+    width: 254px;
+    bottom: -20px;
+    left: -70px;
 }
 
+.bottle-anaar-shadow {
+    position: absolute;
+    width: 310px;
+    bottom: -30px;
+    left: -60px;
+    z-index: -1;
+}
+
+.ice-anaar-top {
+    top: 50px;
+    right: -80px;
+}
+
+
 .ice-anaar-bottom {
-    bottom: 50px;
+    bottom: 130px;
     left: -200px;
+}
+
+
+.ice-anaar-mid {
+    bottom: 0px;
+    left: 200px;
 }
 
 /* Mouse Scroll */

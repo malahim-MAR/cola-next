@@ -57,20 +57,18 @@ const Slide7 = () => {
                     whileInView="visible"
                     viewport={{ once: true }}
                 >
-                    Ignite
+                    Green
                 </motion.h2>
 
-                <h1 className="hero-soda-heading">
-                    <motion.span
-                        className="soda-left"
-                        variants={slideLeft}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                    >
-                        the
-                    </motion.span>
-                </h1>
+                <motion.span
+                    className="soda-left"
+                    variants={slideLeft}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                >
+                    Wild
+                </motion.span>
 
                 <motion.h6
                     className="mid-soda-text"
@@ -79,7 +77,7 @@ const Slide7 = () => {
                     whileInView="visible"
                     viewport={{ once: true }}
                 >
-                    fire
+                    Zero
                 </motion.h6>
                 {/* Right Side */}
                 <motion.h2
@@ -89,7 +87,7 @@ const Slide7 = () => {
                     whileInView="visible"
                     viewport={{ once: true }}
                 >
-                    Rule
+                    Fizz.
                 </motion.h2>
                 <motion.h2
                     className="right-mid-soda-text"
@@ -98,7 +96,7 @@ const Slide7 = () => {
                     whileInView="visible"
                     viewport={{ once: true }}
                 >
-                    Your
+                    Taste.
                 </motion.h2>
                 <motion.h2
                     className="right-bottom-soda-text"
@@ -107,7 +105,7 @@ const Slide7 = () => {
                     whileInView="visible"
                     viewport={{ once: true }}
                 >
-                    Day!
+                    Rules
                 </motion.h2>
             </div>
 

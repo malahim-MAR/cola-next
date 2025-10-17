@@ -1,9 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./Slide8.css";
-import bottle from "../../assets/annar-bottle.png";
-import ice1 from "../../assets/ice1.png";
-import ice2 from "../../assets/ice2.png";
+import bottle from "../../assets/lyche-bottle.png";
+import ice1 from "../../assets/lychee1.png";
+import ice2 from "../../assets/lychee2.png";
 import mouse from "../../assets/mouse.png";
 
 const Slide8 = () => {
@@ -57,7 +57,12 @@ const Slide8 = () => {
                     whileInView="visible"
                     viewport={{ once: true }}
                 >
-                    Ignite
+                    <span>
+                        Exotic
+                    </span>
+                    <span>
+                        Sweetness,
+                    </span>
                 </motion.h2>
 
                 <h1 className="hero-lychee-heading">
@@ -68,7 +73,7 @@ const Slide8 = () => {
                         whileInView="visible"
                         viewport={{ once: true }}
                     >
-                        the
+                        to
                     </motion.span>
                 </h1>
 
@@ -79,7 +84,7 @@ const Slide8 = () => {
                     whileInView="visible"
                     viewport={{ once: true }}
                 >
-                    fire
+                     Chilled
                 </motion.h6>
                 {/* Right Side */}
                 <motion.h2
@@ -89,9 +94,9 @@ const Slide8 = () => {
                     whileInView="visible"
                     viewport={{ once: true }}
                 >
-                    Rule
+                    Perfection.
                 </motion.h2>
-                <motion.h2
+                {/* <motion.h2
                     className="right-mid-lychee-text"
                     variants={slideRight}
                     initial="hidden"
@@ -108,7 +113,7 @@ const Slide8 = () => {
                     viewport={{ once: true }}
                 >
                     Day!
-                </motion.h2>
+                </motion.h2> */}
             </div>
 
             {/* Bottle + Ice */}
@@ -120,6 +125,7 @@ const Slide8 = () => {
                 viewport={{ once: true }}
             >
                 <img src={bottle} alt="lychee Bottle" className="bottle-lychee" />
+                <img src={bottle} alt="lychee Bottle" className="bottle-lychee-piece" />
                 <motion.img
                     src={ice1}
                     alt=""
