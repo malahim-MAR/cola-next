@@ -8,6 +8,7 @@ import AnnarPiece1 from "../../assets/AnnarPiece1.png";
 import AnnarPiece2 from "../../assets/AnnarPiece2.png";
 import AnnarPiece3 from "../../assets/AnnarPiece3.png";
 import mouse from "../../assets/mouse.png";
+import { useEffect, useState } from "react";
 
 const Slide6 = () => {
     // Variants for smooth animation flow
@@ -32,20 +33,18 @@ const Slide6 = () => {
     };
 
     const slideRight = {
-        hidden: { x: 500, opacity: 0 },
+        hidden: { x: window.innerWidth < 1024 ? 100 : 300, opacity: 0 },
         visible: {
-            x: [500, 480, 0], // same for right side
-            opacity: [0, 0.8, 1],
+            x: [window.innerWidth < 1024 ? 100 : 300, window.innerWidth < 1024 ? 30 : 60, 0],
+            opacity: [0, 0.6, 1],
             transition: {
-                duration: 2,
-                ease: [0.25, 1, 0.5, 1],
-                times: [0, 0.15, 1],
+                duration: window.innerWidth < 1024 ? 1.6 : 2.4, // faster on smaller screens
+                ease: [0.33, 1, 0.68, 1], // smoother, cinematic ease-out
+                times: [0, 0.25, 1], // longer soft middle for fluidity
                 delay: 0.1,
             },
         },
     };
-
-
 
 
 
@@ -58,7 +57,7 @@ const Slide6 = () => {
                     variants={fadeZoom}
                     initial="hidden"
                     whileInView="visible"
-                     viewport={{ once: false, amount: 0.6 }}
+                    viewport={{ once: false, amount: 0.6 }}
                 >
                     <span>
                         Bold,
@@ -74,7 +73,7 @@ const Slide6 = () => {
                         variants={slideLeft}
                         initial="hidden"
                         whileInView="visible"
-                         viewport={{ once: false, amount: 0.6 }}
+                        viewport={{ once: false, amount: 0.6 }}
                     >
                         and
                     </motion.span>
@@ -95,7 +94,7 @@ const Slide6 = () => {
                     variants={slideRight}
                     initial="hidden"
                     whileInView="visible"
-                     viewport={{ once: false, amount: 0.6 }}
+                    viewport={{ once: false, amount: 0.6 }}
                 >
                     Bursting
                 </motion.h2>
@@ -104,7 +103,7 @@ const Slide6 = () => {
                     variants={slideRight}
                     initial="hidden"
                     whileInView="visible"
-                     viewport={{ once: false, amount: 0.6 }}
+                    viewport={{ once: false, amount: 0.6 }}
                 >
                     With
                 </motion.h2>
@@ -113,7 +112,7 @@ const Slide6 = () => {
                     variants={slideRight}
                     initial="hidden"
                     whileInView="visible"
-                     viewport={{ once: false, amount: 0.6 }}
+                    viewport={{ once: false, amount: 0.6 }}
                 >
                     Power
                 </motion.h2>
@@ -125,7 +124,7 @@ const Slide6 = () => {
                 variants={fadeZoom}
                 initial="hidden"
                 whileInView="visible"
-                 viewport={{ once: false, amount: 0.6 }}
+                viewport={{ once: false, amount: 0.6 }}
             >
                 <img src={bottle} alt="anaar Bottle" className="bottle-anaar" />
                 <img src={anaarpiece} alt="anaarpiece" className="bottle-anaar-piece" />

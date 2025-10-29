@@ -16,15 +16,31 @@ const Slide8 = () => {
     };
 
 
+   
     const slideLeft = {
-        hidden: { x: -500, opacity: 0 },
+        hidden: { x: window.innerWidth < 1024 ? -100 : -300, opacity: 0 },
         visible: {
-            x: [-500, -480, 0], // slight start movement, pause, then complete
-            opacity: [0, 0.8, 1],
+            x: [window.innerWidth < 1024 ? -100 : -300, window.innerWidth < 1024 ? -30 : -60, 0],
+            opacity: [0, 0.6, 1],
             transition: {
-                duration: 2,
-                ease: [0.25, 1, 0.5, 1],
-                times: [0, 0.15, 1], // pause near start
+                duration: window.innerWidth < 1024 ? 1.6 : 2.4, // faster on smaller screens
+                ease: [0.33, 1, 0.68, 1], // same cinematic smoothness
+                times: [0, 0.25, 1],
+                delay: 0.1,
+            },
+        },
+    };
+
+
+    const slideRight = {
+        hidden: { x: window.innerWidth < 1024 ? 100 : 300, opacity: 0 },
+        visible: {
+            x: [window.innerWidth < 1024 ? 100 : 300, window.innerWidth < 1024 ? 30 : 60, 0],
+            opacity: [0, 0.6, 1],
+            transition: {
+                duration: window.innerWidth < 1024 ? 1.6 : 2.4, // faster on smaller screens
+                ease: [0.33, 1, 0.68, 1], // same cinematic smoothness
+                times: [0, 0.25, 1],
                 delay: 0.1,
             },
         },
@@ -43,21 +59,6 @@ const Slide8 = () => {
             },
         },
     };
-
-    const slideRight = {
-        hidden: { x: 500, opacity: 0 },
-        visible: {
-            x: [500, 480, 0], // same for right side
-            opacity: [0, 0.8, 1],
-            transition: {
-                duration: 2,
-                ease: [0.25, 1, 0.5, 1],
-                times: [0, 0.15, 1],
-                delay: 0.1,
-            },
-        },
-    };
-
 
 
 

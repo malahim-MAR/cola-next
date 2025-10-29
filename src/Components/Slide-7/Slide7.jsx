@@ -14,34 +14,35 @@ const Slide7 = () => {
         visible: { opacity: 1, scale: 1, transition: { duration: 1.5, ease: "easeOut" } },
     };
 
-
     const slideLeft = {
-        hidden: { x: -500, opacity: 0 },
+        hidden: { x: window.innerWidth < 1024 ? -100 : -300, opacity: 0 },
         visible: {
-            x: [-500, -480, 0], // slight start movement, pause, then complete
-            opacity: [0, 0.8, 1],
+            x: [window.innerWidth < 1024 ? -100 : -300, window.innerWidth < 1024 ? -30 : -60, 0],
+            opacity: [0, 0.6, 1],
             transition: {
-                duration: 2,
-                ease: [0.25, 1, 0.5, 1],
-                times: [0, 0.15, 1], // pause near start
+                duration: window.innerWidth < 1024 ? 1.6 : 2.4, // faster on smaller screens
+                ease: [0.33, 1, 0.68, 1], // same cinematic smoothness
+                times: [0, 0.25, 1],
                 delay: 0.1,
             },
         },
     };
+
 
     const slideRight = {
-        hidden: { x: 500, opacity: 0 },
+        hidden: { x: window.innerWidth < 1024 ? 100 : 300, opacity: 0 },
         visible: {
-            x: [500, 480, 0], // same for right side
-            opacity: [0, 0.8, 1],
+            x: [window.innerWidth < 1024 ? 100 : 300, window.innerWidth < 1024 ? 30 : 60, 0],
+            opacity: [0, 0.6, 1],
             transition: {
-                duration: 2,
-                ease: [0.25, 1, 0.5, 1],
-                times: [0, 0.15, 1],
+                duration: window.innerWidth < 1024 ? 1.6 : 2.4, // faster on smaller screens
+                ease: [0.33, 1, 0.68, 1], // same cinematic smoothness
+                times: [0, 0.25, 1],
                 delay: 0.1,
             },
         },
     };
+
 
 
 
@@ -56,7 +57,7 @@ const Slide7 = () => {
                     variants={slideLeft}
                     initial="hidden"
                     whileInView="visible"
-                     viewport={{ once: false, amount: 0.6 }}
+                    viewport={{ once: false, amount: 0.6 }}
                 >
                     Green
                 </motion.h2>
@@ -66,7 +67,7 @@ const Slide7 = () => {
                     variants={slideLeft}
                     initial="hidden"
                     whileInView="visible"
-                     viewport={{ once: false, amount: 0.6 }}
+                    viewport={{ once: false, amount: 0.6 }}
                 >
                     Wild
                 </motion.span>
@@ -76,7 +77,7 @@ const Slide7 = () => {
                     variants={slideLeft}
                     initial="hidden"
                     whileInView="visible"
-                     viewport={{ once: false, amount: 0.6 }}
+                    viewport={{ once: false, amount: 0.6 }}
                 >
                     Zero
                 </motion.h6>
@@ -86,7 +87,7 @@ const Slide7 = () => {
                     variants={slideRight}
                     initial="hidden"
                     whileInView="visible"
-                     viewport={{ once: false, amount: 0.6 }}
+                    viewport={{ once: false, amount: 0.6 }}
                 >
                     Fizz.
                 </motion.h2>
@@ -95,7 +96,7 @@ const Slide7 = () => {
                     variants={slideRight}
                     initial="hidden"
                     whileInView="visible"
-                     viewport={{ once: false, amount: 0.6 }}
+                    viewport={{ once: false, amount: 0.6 }}
                 >
                     Taste.
                 </motion.h2>
@@ -104,7 +105,7 @@ const Slide7 = () => {
                     variants={slideRight}
                     initial="hidden"
                     whileInView="visible"
-                     viewport={{ once: false, amount: 0.6 }}
+                    viewport={{ once: false, amount: 0.6 }}
                 >
                     Rules
                 </motion.h2>
@@ -116,7 +117,7 @@ const Slide7 = () => {
                 variants={fadeZoom}
                 initial="hidden"
                 whileInView="visible"
-                 viewport={{ once: false, amount: 0.6 }}
+                viewport={{ once: false, amount: 0.6 }}
             >
                 <img src={bottle} alt="soda Bottle" className="bottle-soda" />
                 <img src={bottleshadow} alt="Bottle shadow" className="bottle-shadow" />

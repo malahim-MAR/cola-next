@@ -66,21 +66,19 @@ const Slide1 = () => {
                         className="cola-left"
                         variants={slideLeft}
                         initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: false, amount: 0.6 }}
+                        animate="visible"
                     >
                         Cola
                     </motion.span>
-                    &nbsp;
                     <motion.span
                         className="next-right"
                         variants={slideRight}
                         initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: false, amount: 0.6 }}
+                        animate="visible"
                     >
                         Next
                     </motion.span>
+
                 </h1>
 
                 <motion.h6

@@ -228,3 +228,26 @@
         width: 25px;
     }
 }
+
+/* === FIX FOR 1440p RESOLUTION === */
+@media (max-width: 1440px) {
+    .right-mid-storm-text {
+        position: absolute;
+        left: 210px;
+        top: 175px;
+        letter-spacing: -6%;
+        margin: 0;
+        font-weight: 700;
+        font-size: 48px;
+    }
+
+    .right-bottom-storm-text {
+        position: absolute;
+        left: 120px;
+        bottom: -170px;
+        letter-spacing: -6px;
+        margin: 0;
+        font-weight: 700;
+        font-size: 128px;
+    }
+}

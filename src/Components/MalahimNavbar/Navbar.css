@@ -197,3 +197,27 @@
         top: 30px;
     }
 }
+
+@media (max-width: 1440px) {
+    nav.navbar {
+        padding: 0 50px;
+    }
+
+    .menu-item {
+        font-size: 32px;
+        font-weight: medium;
+        padding: 25px 0;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+
+    .menu-right ul li {
+        font-size: 24px;
+        font-weight: 400;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 25px 0;
+
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+}

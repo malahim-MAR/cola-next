@@ -99,6 +99,10 @@
 }
 
 /* Responsive */
+@media (max-width: 1440px) {
+    
+}
+
 @media (max-width: 1024px) {
     .hero-cola-heading {
         font-size: 110px;

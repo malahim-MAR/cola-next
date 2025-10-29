@@ -251,3 +251,36 @@
         width: 25px;
     }
 }
+
+@media (max-width:1440px) {
+    .right-top-anaar-text {
+        position: absolute;
+        left: 110px;
+        top: 0px;
+        letter-spacing: -6px;
+        margin: 0;
+        font-weight: 700;
+        font-size: 128px;
+    }
+
+    .right-mid-anaar-text {
+        position: absolute;
+        left: 300px;
+        top: 125px;
+        letter-spacing: -6%;
+        margin: 0;
+        font-weight: 700;
+        font-size: 48px;
+    }
+
+    .right-bottom-anaar-text {
+        position: absolute;
+        left: 180px;
+        bottom: -120px;
+        letter-spacing: -6px;
+        margin: 0;
+        font-weight: 700;
+        font-size: 128px;
+    }
+
+}

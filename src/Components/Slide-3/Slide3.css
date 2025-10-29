@@ -115,3 +115,34 @@
         transform: translateY(0);
     }
 }
+
+
+/* === FIX for 1440p and above === */
+@media screen and (max-width: 1440px) {
+    .bottom-rango-text {
+        position: absolute;
+        left: 500px;
+        top: 35px;
+    }
+
+    .left-rango-text {
+        left: 296px;
+        top: 83px;
+    }
+
+    .top-rango-text {
+        left: 40px;
+        top: -120px;
+    }
+
+    /* Optional: keep text scaling balanced */
+    .top-rango-text,
+    .bottom-rango-text {
+        font-size: 118px;
+        /* just under your original 128px */
+    }
+
+    .left-rango-text {
+        font-size: 44px;
+    }
+}

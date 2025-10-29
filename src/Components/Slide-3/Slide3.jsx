@@ -83,7 +83,7 @@ const Slide3 = () => {
                     variants={fadeDown}
                     initial="hidden"
                     whileInView="visible"
-                     viewport={{ once: false, amount: 0.6 }}
+                    viewport={{ once: false, amount: 0.6 }}
                 >
                     <span>Zesty Sunshine</span>
                 </motion.h2>
@@ -93,7 +93,7 @@ const Slide3 = () => {
                     variants={fadeUp}
                     initial="hidden"
                     whileInView="visible"
-                     viewport={{ once: false, amount: 0.6 }}
+                    viewport={{ once: false, amount: 0.6 }}
                 >
                     <span>in</span>
                 </motion.h2>
@@ -103,7 +103,7 @@ const Slide3 = () => {
                     variants={fadeRight}
                     initial="hidden"
                     whileInView="visible"
-                     viewport={{ once: false, amount: 0.6 }}
+                    viewport={{ once: false, amount: 0.6 }}
                 >
                     <span>
                         Every <br /> Sip!
@@ -117,7 +117,7 @@ const Slide3 = () => {
                 variants={fadeBottle}
                 initial="hidden"
                 whileInView="visible"
-                 viewport={{ once: false, amount: 0.6 }}
+                viewport={{ once: false, amount: 0.6 }}
             >
                 <img src={bottle} alt="Rango Bottle" className="bottle-rango" />
                 <img src={bottleshadow} alt="Bottle shadow" className="bottle-shadow" />
@@ -130,7 +130,7 @@ const Slide3 = () => {
                     variants={fadeIn}
                     initial="hidden"
                     whileInView="visible"
-                     viewport={{ once: false, amount: 0.6 }}
+                    viewport={{ once: false, amount: 0.6 }}
                 />
 
                 {/* ❄️ Ice 1 */}
@@ -141,7 +141,7 @@ const Slide3 = () => {
                     variants={fromRight}
                     initial="hidden"
                     whileInView="visible"
-                     viewport={{ once: false, amount: 0.6 }}
+                    viewport={{ once: false, amount: 0.6 }}
                     animate={{ y: [0, -10, 0] }}
                     transition={{ duration: 4, ease: "easeInOut", repeat: Infinity }}
                 />
@@ -154,7 +154,7 @@ const Slide3 = () => {
                     variants={fromLeft}
                     initial="hidden"
                     whileInView="visible"
-                     viewport={{ once: false, amount: 0.6 }}
+                    viewport={{ once: false, amount: 0.6 }}
                     animate={{ y: [0, 10, 0] }}
                     transition={{ duration: 4, ease: "easeInOut", repeat: Infinity }}
                 />
@@ -167,7 +167,7 @@ const Slide3 = () => {
                     variants={fromRight}
                     initial="hidden"
                     whileInView="visible"
-                     viewport={{ once: false, amount: 0.6 }}
+                    viewport={{ once: false, amount: 0.6 }}
                     animate={{ y: [0, -10, 0] }}
                     transition={{ duration: 4, ease: "easeInOut", repeat: Infinity }}
                 />
@@ -181,7 +181,7 @@ const Slide3 = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                 viewport={{ once: false, amount: 0.6 }}
+                viewport={{ once: false, amount: 0.6 }}
             />
         </section>
     );
