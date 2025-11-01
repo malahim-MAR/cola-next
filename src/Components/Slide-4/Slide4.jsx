@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import "./Slide4.css";
-import bottle from "../../assets/storm-bottle.png";
+import bottle from "../../assets/Storm-bottle.png";
 import bottleshadow from "../../assets/bottle-shadows/storm.png";
 import ice1 from "../../assets/ice1.png";
 import ice2 from "../../assets/ice2.png";
