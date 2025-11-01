@@ -1,206 +1,189 @@
 .hero-lemon {
-    position: relative;
-    height: 100vh;
-    background: #f6e600 url("../../assets/LemonBg.png") center center / cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    padding: 0 15px;
-    z-index: 2;
-    /* Higher than cola */
+  position: relative;
+  height: 100vh;
+  background: #f6e600 url("../assets/LemonBg.png") center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0 15px;
+  z-index: 2;
 }
 
+/* ---------- TEXT SECTION ---------- */
 .hero-lemon-text {
-    position: absolute;
-    color: #004400;
-    text-align: center;
-    z-index: 3;
+  position: absolute;
+  color: #004400;
+  text-align: center;
+  z-index: 3;
 }
 
 .hero-lemon-text h1 {
-    margin: 0;
-    font-weight: 700;
-    font-size: 160px;
-    line-height: 1;
+  margin: 0;
+  font-weight: 700;
+  font-size: 160px;
+  line-height: 1;
 }
 
 .hero-lemon-text h1 span {
-    color: #ffee00;
+  color: #ffee00;
 }
 
+/* Top Text */
 .top-lemon-text {
-    position: relative;
-    left: 0px;
-    top: -180px;
-    font-size: 128px;
-    color: white;
-    font-weight: 700;
+  position: relative;
+  left: 0;
+  top: -170px;
+  font-size: 128px;
+  color: white;
+  font-weight: 700;
 }
-
 .top-lemon-text span {
-    letter-spacing: -6%;
-
+  letter-spacing: -6%;
 }
 
+/* Left Text */
 .left-lemon-text {
-    position: absolute;
-    left: 100px;
-    top: -50px;
-    font-size: 128px;
-    color: white;
-    font-weight: 700;
+  position: absolute;
+  left: 100px;
+  top: -50px;
+  font-size: 128px;
+  color: white;
+  font-weight: 700;
 }
-
 .left-lemon-text span {
-    letter-spacing: 0;
-
+  letter-spacing: -6%;
 }
 
+/* Mid Text */
 .mid-lemon-text {
-    position: absolute;
-    left: 30%;
-    bottom: -40px;
-    font-size: 48px;
-    font-weight: 700;
+  position: absolute;
+  left: 30%;
+  bottom: -40px;
+  font-size: 48px;
+  font-weight: 700;
 }
 
-.right-text-group {
-    right: 150px;
-    bottom: -80px;
-}
-
+/* Right Text */
 .right-lemon-text {
-    position: relative;
-    right: 0px;
-    top: -30px;
-    font-size: 48px;
-    color: white;
-    font-weight: 700;
+  position: absolute;
+  right: 180px;
+  top: 90px;
+  color: white;
+  font-weight: 700;
+}
+.right-lemon-text .small-heading {
+  letter-spacing: -6%;
+  font-size: 48px;
 }
 
-.right-lemon-text span {
-    letter-spacing: -6%;
-
-}
-
+/* Bottom Text */
 .bottom-lemon-text {
-    position: relative;
-    left: 250px;
-    top: 100px;
-    font-size: 128px;
-    color: white;
-    line-height: 100px;
-    font-weight: 700;
-
+  position: absolute;
+  right: -150px;
+  bottom: -80px;
+  font-size: 96px;
+  color: white;
+  line-height: 100px;
+  font-weight: 700;
 }
-
 .bottom-lemon-text span {
-    letter-spacing: -6%;
-
+  letter-spacing: -6%;
 }
 
-/* Bottle */
-/* .bottle-lemon-wrap {
-    position: relative;
-    z-index: 4;
-    margin-top: 100px;
-}
-
-.bottle-lemon {
-    width: 130px;
-} */
-
-/* Ice */
-.ice-lemon {
-    position: absolute;
-    width: 150px;
-    opacity: 0.9;
-    animation: floatIceLemon 4s ease-in-out infinite;
-}
-
-.ice-lemon-top {
-    top: 0px;
-    right: -150px;
-}
-
-.ice-lemon-bottom {
-    bottom: 50px;
-    left: -200px;
-}
-
-@keyframes floatIceLemon {
-    0% {
-        transform: translateY(0) rotate(0deg);
-    }
-
-    50% {
-        transform: translateY(-10px) rotate(5deg);
-    }
-
-    100% {
-        transform: translateY(0) rotate(0deg);
-    }
-}
-
-/* Mouse Scroll */
-.mouse-lemon {
-    position: absolute;
-    bottom: 20px;
-    width: 35px;
-    animation: mouseLemonAnim 1.5s infinite ease-in-out;
-}
-
-@keyframes mouseLemonAnim {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(10px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
+/* ---------- DECORATIVE ELEMENTS ---------- */
+.lemon-1 {
+  position: absolute;
+  width: 115px;
+  height: 117px;
+  top: 100px;
+  left: 260px;
 }
 
 .lemon-2 {
-    position: absolute;
-    width: 302px;
-    height: 222px;
-    bottom: -30px;
-    right: -100px;
-    /* animation: floatIceLemon 4s ease-in-out infinite; */
-}
-
-.lemon-1 {
-    position: absolute;
-    width: 115px;
-    height: 117px;
-    top: 100px;
-    left: 260px;
-    /* animation: floatIceLemon 4s ease-in-out infinite; */
+  position: absolute;
+  width: 302px;
+  height: 222px;
+  bottom: -30px;
+  right: -100px;
 }
 
 .orange-leaf-1 {
-    position: absolute;
-    width: 117px;
-    /* height: 161px; */
-    top: 60px;
-    left: -260px;
-    /* animation: floatIceLemon 4s ease-in-out infinite; */
+  position: absolute;
+  width: 117px;
+  top: 60px;
+  left: -260px;
 }
 
 .leaf-2 {
-    position: absolute;
-    width: 85px;
-    height: 161px;
-    top: -100px;
-    left: 390px;
-    /* animation: floatIceLemon 4s ease-in-out infinite; */
+  position: absolute;
+  width: 85px;
+  height: 161px;
+  top: -100px;
+  left: 390px;
 }
-/* Animation for 'LIFT' text */
+
+/* ---------- BOTTLE ---------- */
+.bottle-lemon-wrap {
+  position: relative;
+  z-index: 4;
+  margin-top: 100px;
+}
+.bottle-lemon {
+  width: 130px;
+}
+
+/* ---------- ICE FLOAT ---------- */
+.ice-lemon {
+  position: absolute;
+  width: 150px;
+  opacity: 0.9;
+  animation: floatIceLemon 4s ease-in-out infinite;
+}
+
+.ice-lemon-top {
+  top: 0;
+  right: -150px;
+}
+
+.ice-lemon-bottom {
+  bottom: 50px;
+  left: -200px;
+}
+
+@keyframes floatIceLemon {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+/* ---------- MOUSE SCROLL ---------- */
+.mouse-lemon {
+  position: absolute;
+  bottom: 20px;
+  width: 35px;
+  animation: mouseLemonAnim 1.5s infinite ease-in-out;
+}
+
+@keyframes mouseLemonAnim {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* ---------- TEXT ANIMATIONS ---------- */
 @keyframes liftFromTop {
   0% {
     transform: translateY(-120px);
@@ -212,7 +195,6 @@
   }
 }
 
-/* Animation for 'EVERY CHILL' text */
 @keyframes chillFromRight {
   0% {
     transform: translateX(250px);
@@ -224,7 +206,6 @@
   }
 }
 
-/* Attach animations */
 .lift-animate {
   animation: liftFromTop 1s ease-out forwards;
 }
